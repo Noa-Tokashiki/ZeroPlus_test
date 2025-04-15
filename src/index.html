@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コードと表示設定 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- タイトル（ページタイトルを変更） -->
+    <title>雫 - sizuku coffee drip -</title>
+
+    <!-- ページの説明（SEOに重要） -->
+    <meta
+      name="description"
+      content="浅煎りシングルオリジンのコーヒー専門店『雫 - sizuku coffee drip -』。丁寧なハンドドリップと静かな時間をお届けします。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon / アイコン（必要に応じて変更） -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="webclip.png" />
+
+    <!-- OGP設定（SNSでの見え方） -->
+    <meta property="og:site_name" content="雫 - sizuku coffee drip -" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="雫 -sizuku coffee drip-" />
+    <meta
+      property="og:description"
+      content="浅煎りシングルオリジンのコーヒーを、手仕事で。静かな時間を味わうカフェ体験。"
+    />
+    <meta property="og:image" content="https://example.com/ogp.jpg" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitterカード設定 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Twitter用説明文" />
+    <meta name="twitter:image:src" content="https://example.com/ogp.jpg" />
+
+    <!-- Google Fonts（変更可能） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klee+One&family=Shippori+Mincho+B1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS（必要に応じて変更） -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JavaScript（必要に応じて変更） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body class="js_body">
+    <header class="l_header js_header">
+      <a href="index.html" class="l_header-logo_link">
+        <img
+          src="img/logo-white.png"
+          class="l_header-logo_img"
+          id="jsLogoImg"
+          alt="サイトロゴ"
+          width="50"
+          height="55"
+        />
+      </a>
+
+      <nav class="l_header-nav js_navigation">
+        <div class="l_header-nav_inner">
+          <!-- メニュー -->
+          <ul class="l_header-nav_list">
+            <li class="l_header-nav_item">
+              <a href="about.html" class="l_header-nav_link">ABOUT</a>
+            </li>
+            <li class="l_header-nav_item">
+              <a href="menu.html" class="l_header-nav_link">MENU</a>
+            </li>
+            <li class="l_header-nav_item">
+              <a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
+            </li>
+            <li class="l_header-nav_item">
+              <a href="news.html" class="l_header-nav_link">NEWS</a>
+            </li>
+            <li class="l_header-nav_item">
+              <a href="online_shop.html" class="l_header-nav_link"
+                >ONLINE SHOP</a
+              >
+            </li>
+            <li class="l_header-nav_item">
+              <a href="contact.html" class="l_header-nav_link">CONTACT</a>
+            </li>
+          </ul>
+
+          <!-- 追加テキスト -->
+          <p class="l_header-nav_msg">
+            <span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee drip-
+          </p>
+
+          <!-- ロゴ -->
+          <a href="index.html" class="l_header-nav_logo">
+            <img
+              src="img/logo-white.png"
+              alt="サイトロゴ"
+              width="80"
+              height="88"
+            />
+          </a>
+
+          <!-- インスタ -->
+          <a href="#" class="l_header-nav_insta">
+            <img
+              src="img/instagram-white.png"
+              alt="インスタグラムロゴ"
+              width="50"
+              height="51"
+            />
+          </a>
+        </div>
+      </nav>
+
+      <a href="#" class="l_header-logo_link">
+        <img
+          src="img/instagram_white.png"
+          id="jsLogoImg2"
+          class="l_header-logo_img"
+          alt="インスタグラムロゴ"
+          width="50"
+          height="51"
+        />
+      </a>
+
+      <button class="m_hamburger js_hamburger">
+        <span class="m_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
+      </button>
+    </header>
+    <!-- /.l_header -->
+
+    <div class="top_kv">
+      <div class="top_kv_title-wrapper">
+        <p class="top_kv_title">雫</p>
+        <p class="top_kv_sub-title">-sizuku coffee drip-</p>
+      </div>
+      <div class="top_kv_txt-wrapper">
+        <p class="top_kv_txt">丁寧に淹れた一杯と静寂の空間で、</p>
+        <p class="top_kv_txt indent">日常をリセットする上質なカフェ体験。</p>
+      </div>
+      <div class="top_kv_video-wrapper">
+        <div class="top_kv_overlay"></div>
+        <video
+          class="top_kv_video"
+          src="img/top_kv.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+      </div>
+    </div>
+    <!-- /.top_kv -->
+    <main class="top_main js_main">
+      <section class="top_about">
+        <div class="l_container-lg m_backgruond_img-box">
+          <div class="l_contents">
+            <h2 class="top_section_title">
+              ABOUT
+              <div class="top_section_title-arrow"></div>
+            </h2>
+            <p class="top_about_txt-main">
+              気持ちを整える、透明な酸味。<br />
+              ひと口のコーヒーが、ふと立ち止まるきっかけになる。
+            </p>
+            <p class="top_about_txt-sub">
+              仕事の合間、考えごとの途中、ただぼんやりしたい午後。<br />
+              そんな日常のすきまに、豆本来の酸味と香りがすっと染み込むような軽やかな一杯をお届けします。
+            </p>
+            <p class="top_about_txt-sub">
+              私たちが選ぶのは、産地の空気や風土をそのまま感じられる、浅煎りのシングルオリジン。<br />
+              その繊細な個性を引き出すため、一杯ずつ丁寧にハンドドリップで抽出しています。
+            </p>
+            <p class="top_about_txt-sub">
+              都市のすこし外れにある気分をリセットできる場所。<br />
+              ここに来れば、いつも通りのわたしに戻れる。<br />
+              香りから始まる、静かな旅をどうぞお楽しみください。
+            </p>
+
+            <a href="about.html" class="m_link-box">
+              <p class="m_link-txt">discover the story ></p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="top_menu">
+        <div class="l_container-lg">
+          <div class="l_contents">
+            <h2 class="top_section_title">
+              MENU
+              <div class="top_section_title-arrow"></div>
+            </h2>
+            <div class="top_menu-inner">
+              <div class="top_menu_img-wrapper">
+                <img
+                  src="img/top_menu_img01.jpg"
+                  width="1530"
+                  height="640"
+                  alt="コーヒー写真"
+                  class="top_menu_img"
+                />
+              </div>
+              <!-- /.top_info_img-wrapper -->
+              <div class="top_menu_box">
+                <p class="top_menu_sub-txt">LUIS FERNANDO</p>
+                <p class="top_menu_main-txt">COLOMBIA</p>
+                <p class="top_menu_price">￥700 -</p>
+              </div>
+            </div>
+            <div class="top_menu-inner">
+              <div class="top_menu_img-wrapper">
+                <img
+                  src="img/top_menu_img02.jpg"
+                  width="1530"
+                  height="640"
+                  alt="コーヒーの写真"
+                  class="top_menu_img"
+                />
+              </div>
+              <!-- /.top_info_img-wrapper -->
+              <div class="top_menu_box">
+                <p class="top_menu_main-txt">LIMITED COFFEE</p>
+                <p class="top_menu_price">￥1,100 -</p>
+              </div>
+            </div>
+
+            <a href="menu.html" class="m_link-box">
+              <p class="m_link-txt">read more ></p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="top_news">
+        <div class="l_container-lg">
+          <div class="l_contents">
+            <h2 class="top_section_title">
+              NEWS
+              <div class="top_section_title-arrow"></div>
+            </h2>
+            <div class="l_container m_backgruond_img-box">
+              <div class="l_container-sm">
+                <div class="top_news_list">
+                  <a href="news-detail.html" class="top_news_link">
+                    <article class="top_news_item">
+                      <div class="top_news_item-wrapper">
+                        <time class="top_news_time"> 2025.04.20 </time>
+                        <span class="top_news_category">NEWS</span>
+                      </div>
+                      <p class="top_news_txt">
+                        新店舗オープンのお知らせ<br />いつも「雫 -sizuku coffee
+                        drip-」をご愛顧いただき…
+                      </p>
+                    </article>
+                  </a>
+                  <a href="news-detail.html" class="top_news_link">
+                    <article class="top_news_item">
+                      <div class="top_news_item-wrapper">
+                        <time class="top_news_time"> 2025.04.12 </time>
+                        <span class="top_news_category">EVENT</span>
+                      </div>
+                      <p class="top_news_txt">
+                        春のハンドドリップ体験イベント開催<br />
+                        コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただきた…
+                      </p>
+                    </article>
+                  </a>
+                  <a href="news-detail.html" class="top_news_link">
+                    <article class="top_news_item">
+                      <div class="top_news_item-wrapper">
+                        <time class="top_news_time"> 2025.04.01 </time>
+                        <span class="top_news_category">BEANS</span>
+                      </div>
+                      <p class="top_news_txt">
+                        春のシングルオリジン、数量限定でご用意しました<br />
+                        春の訪れにあわせて、新たにシングルオリジンの豆を数量…
+                      </p>
+                    </article>
+                  </a>
+                </div>
+
+                <a href="news.html" class="m_link-box">
+                  <p class="m_link-txt">learn more ></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="top_shop">
+        <div class="top_shop-wrapper">
+          <div class="top_shop_kv-wrapper">
+            <img
+              src="img/top_shop_kv.jpg"
+              alt=""
+              class="top_shop_kv-img"
+              width="1600"
+              height="1008"
+            />
+          </div>
+          <a href="online_shop.html" class="top_shop_link">
+            <div class="top_shop_box">
+              <h2 class="top_section_title">
+                ONLINE SHOP
+                <div class="top_section_title-arrow"></div>
+              </h2>
+              <div class="top_shop_logo-wrapper">
+                <img
+                  src="img/shop-logo.png"
+                  alt=""
+                  class="top_shop_logo-img"
+                  width="141"
+                  height="127"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="image_scroller">
+          <div class="image_scroller-track">
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img01.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img02.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img03.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img04.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img05.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img06.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img07.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img08.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img09.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <!-- ループ用に複製 -->
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img01.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="152"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img02.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img03.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img04.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img05.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img06.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img07.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img08.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+            <div class="top_shop_item-wrapper">
+              <img
+                src="img/shop_img09.jpg"
+                class="top_shop_item-img"
+                alt=""
+                width="324"
+                height="324"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- /.top_main -->
+    <footer class="l_footer js_footer">
+      <div class="l_footer_content-box">
+        <div class="l_footer_content">
+          <div class="l_footer_logo-wrapper">
+            <a href="index.html" class="l_footer_logo-link">
+              <img
+                src="img/logo-black.png"
+                alt="雫のロゴ"
+                class="l_footer_logo"
+                width="200"
+                height="220"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="l_footer_content">
+          <ul class="l_footer_nav-list">
+            <li class="l_footer_nav-item">
+              <a href="about.html" class="l_footer_link"> ABOUT </a>
+            </li>
+            <li class="l_footer_nav-item">
+              <a href="news.html" class="l_footer_link"> MENU </a>
+            </li>
+            <li class="l_footer_nav-item">
+              <a href="locations.html" class="l_footer_link"> LOCATIONS </a>
+            </li>
+            <li class="l_footer_nav-item">
+              <a href="news.html" class="l_footer_link"> NEWS </a>
+            </li>
+            <li class="l_footer_nav-item">
+              <a href="online_shop.html" class="l_footer_link"> ONLINE SHOP </a>
+            </li>
+            <li class="l_footer_nav-item">
+              <a href="contact.html" class="l_footer_link"> CONTACT </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="l_footer_content">
+          <div class="l_footer_logo-wrapper-insta">
+            <a href="index.html" class="l_footer_logo-link">
+              <img
+                src="img/instagram-black.png"
+                alt="instagramのロゴ"
+                class="l_footer_logo"
+                width="101"
+                height="100"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="l_footer_content">
+        <p class="l_footer_shop-name">
+          <span class="l_footer_shop-main">雫</span> -sizuku coffee drip-
+        </p>
+      </div>
+
+      <div class="l_footer_content">
+        <a
+          href="pdf/privacy.pdf"
+          target="_blank"
+          rel="noopener"
+          class="l_footer_link-privacy"
+        >
+          <p class="l_footer_privacy-txt">プライバシーポリシー</p>
+        </a>
+      </div>
+      <small class="l_footer_copyright">
+        <p class="l_footer_copyright-txt">
+          &copy; 2025 sizuku coffee drip. All rights reserved.
+        </p>
+      </small>
+    </footer>
+    <!-- /.l_footer -->
+  </body>
+</html>
