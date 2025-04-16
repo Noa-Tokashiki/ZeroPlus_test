@@ -113,3 +113,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(footer);
 });
+
+// menu
+const swiper = new Swiper(".swiper-container", {
+  // ドットインジケーターの表示
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true, //クリックでも切り替え
+  },
+  loop: true, // ループの有効化
+
+  slidesPerView: 1.2, // 表示するスライドの枚数
+  centeredSlides: true, // スライドを中央揃えを有効化
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0, // スライドの回転角度
+    stretch: 50, // スライドの間隔（px単位）
+    depth: 200, // 奥行きの設定（translateをZ方向にpx単位で移動）
+    modifier: 1, //
+    slideShadows: true, // 先頭スライドのbox-shadowを有効化
+  },
+  autoplay: {
+    delay: 3000, // 3秒ごとにスライド
+    disableOnInteraction: false, // ユーザー操作後も自動再開
+  },
+  speed: 800, // スライドのアニメーション時間（ミリ秒）
+});
