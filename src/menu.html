@@ -1,440 +1,514 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <!-- 文字コードと表示設定 -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<!-- 文字コードと表示設定 -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- タイトル（ページタイトルを変更） -->
-    <title>雫 - sizuku coffee drip -</title>
+		<!-- タイトル（ページタイトルを変更） -->
+		<title>雫 - sizuku coffee drip -</title>
 
-    <!-- ページの説明（SEOに重要） -->
-    <meta
-      name="description"
-      content="浅煎りシングルオリジンのコーヒー専門店『雫 - sizuku coffee drip -』。丁寧なハンドドリップと静かな時間をお届けします。"
-    />
-    <meta name="format-detection" content="telephone=no" />
+		<!-- ページの説明（SEOに重要） -->
+		<meta
+			name="description"
+			content="浅煎りシングルオリジンのコーヒー専門店『雫 - sizuku coffee drip -』。丁寧なハンドドリップと静かな時間をお届けします。"
+		/>
+		<meta name="format-detection" content="telephone=no" />
 
-    <!-- favicon / アイコン（必要に応じて変更） -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="webclip.png" />
+		<!-- favicon / アイコン（必要に応じて変更） -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="favicon.png" type="image/png" />
+		<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="webclip.png" />
 
-    <!-- OGP設定（SNSでの見え方） -->
-    <meta property="og:site_name" content="雫 - sizuku coffee drip -" />
-    <meta property="og:url" content="https://example.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="雫 -sizuku coffee drip-" />
-    <meta
-      property="og:description"
-      content="浅煎りシングルオリジンのコーヒーを、手仕事で。静かな時間を味わうカフェ体験。"
-    />
-    <meta property="og:image" content="https://example.com/ogp.jpg" />
-    <meta property="og:locale" content="ja_JP" />
+		<!-- OGP設定（SNSでの見え方） -->
+		<meta property="og:site_name" content="雫 - sizuku coffee drip -" />
+		<meta property="og:url" content="https://example.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="雫 -sizuku coffee drip-" />
+		<meta
+			property="og:description"
+			content="浅煎りシングルオリジンのコーヒーを、手仕事で。静かな時間を味わうカフェ体験。"
+		/>
+		<meta property="og:image" content="https://example.com/ogp.jpg" />
+		<meta property="og:locale" content="ja_JP" />
 
-    <!-- Twitterカード設定 -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Twitter用説明文" />
-    <meta name="twitter:image:src" content="https://example.com/ogp.jpg" />
+		<!-- Twitterカード設定 -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:description" content="Twitter用説明文" />
+		<meta name="twitter:image:src" content="https://example.com/ogp.jpg" />
 
-    <!-- Google Fonts（変更可能） -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+		<!-- Google Fonts（変更可能） -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- CSS（必要に応じて変更） -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+		<!-- CSS（必要に応じて変更） -->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
 
-    <!-- JavaScript（必要に応じて変更） -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/index.js" defer></script>
-    <script src="js/main.js" defer></script>
-  </head>
+		<!-- JavaScript（必要に応じて変更） -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="js/index.js" defer></script>
+		<script src="js/main.js" defer></script>
+	</head>
 
-  <body class="js_body">
-    <header class="l_header js_header">
-      <a href="index.html" class="l_header-logo_link">
-        <img
-          src="img/logo-white.png"
-          class="l_header-logo_img"
-          id="jsLogoImg"
-          alt="サイトロゴ"
-          width="50"
-          height="55"
-        />
-      </a>
+	<body class="js_body">
+		<header class="l_header js_header">
+			<a href="index.html" class="l_header-logo_link">
+				<img
+					src="img/logo-white.png"
+					class="l_header-logo_img"
+					id="jsLogoImg"
+					alt="サイトロゴ"
+					width="50"
+					height="55"
+				/>
+			</a>
 
-      <nav class="l_header-nav js_navigation">
-        <div class="l_header-nav_inner">
-          <!-- メニュー -->
-          <ul class="l_header-nav_list">
-            <li class="l_header-nav_item">
-              <a href="about.html" class="l_header-nav_link">ABOUT</a>
-            </li>
-            <li class="l_header-nav_item">
-              <a href="menu.html" class="l_header-nav_link">MENU</a>
-            </li>
-            <li class="l_header-nav_item">
-              <a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
-            </li>
-            <li class="l_header-nav_item">
-              <a href="news.html" class="l_header-nav_link">NEWS</a>
-            </li>
-            <li class="l_header-nav_item">
-              <a href="online_shop.html" class="l_header-nav_link"
-                >ONLINE SHOP</a
-              >
-            </li>
-            <li class="l_header-nav_item">
-              <a href="contact.html" class="l_header-nav_link">CONTACT</a>
-            </li>
-          </ul>
+			<nav class="l_header-nav js_navigation">
+				<div class="l_header-nav_inner">
+					<!-- メニュー -->
+					<ul class="l_header-nav_list">
+						<li class="l_header-nav_item">
+							<a href="about.html" class="l_header-nav_link">ABOUT</a>
+						</li>
+						<li class="l_header-nav_item">
+							<a href="menu.html" class="l_header-nav_link">MENU</a>
+						</li>
+						<li class="l_header-nav_item">
+							<a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
+						</li>
+						<li class="l_header-nav_item">
+							<a href="news.html" class="l_header-nav_link">NEWS</a>
+						</li>
+						<li class="l_header-nav_item">
+							<a href="online_shop.html" class="l_header-nav_link"
+								>ONLINE SHOP</a
+							>
+						</li>
+						<li class="l_header-nav_item">
+							<a href="contact.html" class="l_header-nav_link">CONTACT</a>
+						</li>
+					</ul>
 
-          <!-- 追加テキスト -->
-          <p class="l_header-nav_msg">
-            <span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee drip-
-          </p>
+					<!-- 追加テキスト -->
+					<p class="l_header-nav_msg">
+						<span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee drip-
+					</p>
 
-          <!-- ロゴ -->
-          <a href="index.html" class="l_header-nav_logo">
-            <img
-              src="img/logo-white.png"
-              alt="サイトロゴ"
-              width="80"
-              height="88"
-            />
-          </a>
+					<!-- ロゴ -->
+					<a href="index.html" class="l_header-nav_logo">
+						<img
+							src="img/logo-white.png"
+							alt="サイトロゴ"
+							width="80"
+							height="88"
+						/>
+					</a>
 
-          <!-- インスタ -->
-          <a href="#" class="l_header-nav_insta">
-            <img
-              src="img/instagram-white.png"
-              alt="インスタグラムロゴ"
-              width="50"
-              height="51"
-            />
-          </a>
-        </div>
-      </nav>
+					<!-- インスタ -->
+					<a href="#" class="l_header-nav_insta">
+						<img
+							src="img/instagram-white.png"
+							alt="インスタグラムロゴ"
+							width="50"
+							height="51"
+						/>
+					</a>
+				</div>
+			</nav>
 
-      <a href="#" class="l_header-logo_link">
-        <img
-          src="img/instagram_white.png"
-          id="jsLogoImg2"
-          class="l_header-logo_img"
-          alt="インスタグラムロゴ"
-          width="50"
-          height="51"
-        />
-      </a>
+			<a href="#" class="l_header-logo_link">
+				<img
+					src="img/instagram_white.png"
+					id="jsLogoImg2"
+					class="l_header-logo_img"
+					alt="インスタグラムロゴ"
+					width="50"
+					height="51"
+				/>
+			</a>
 
-      <button class="m_hamburger js_hamburger">
-        <span class="m_hamburger-bar"></span>
-        <span class="m_hamburger-bar"></span>
-        <span class="m_hamburger-bar"></span>
-      </button>
-    </header>
-    <!-- /.l_header -->
+			<button class="m_hamburger js_hamburger">
+				<span class="m_hamburger-bar"></span>
+				<span class="m_hamburger-bar"></span>
+				<span class="m_hamburger-bar"></span>
+			</button>
+		</header>
+		<!-- /.l_header -->
 
-    <main class="menu_main">
-      <section class="menu_limited">
-        <div class="l_contents">
-          <div class="l_container">
-            <div class="menu_limited_img-wrapper">
-              <img
-                src="img/top_menu_img02.jpg"
-                alt="おすすめ・限定コーヒーの写真"
-                class="menu_limited_img"
-                width="1530"
-                height="640"
-              />
-            </div>
-            <div class="menu_limited_content">
-              <div class="menu_limited_name-box">
-                <div class="menu_limited_name">
-                  <p class="menu_limited_name__en">Luz de Marcala</p>
-                  <p class="menu_limited_name__jp">-ルス・デ・マルカラ-</p>
-                </div>
-                <p class="menu_limited_price">￥1,100-</p>
-              </div>
+		<main class="menu_main">
+			<section class="menu_feature">
+				<div class="l_contents">
+					<div class="l_container">
+						<!-- Slider main container -->
+						<div class="swiper-container">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div class="menu_feature_content">
+										<img
+											src="img/menu_feature_img01.jpg"
+											alt=""
+											class="menu_feature_img"
+										/>
+										<div class="menu_feature_txts menu_feature_txts__ana">
+											<p class="menu_feature_name">ANA AIRPORT</p>
+											<p class="menu_feature_country">HONDURAS</p>
+											<p class="menu_feature_desc">
+												ホンジュラスのやわらかな陽射しと澄んだ水が育てた豆は、
+												浅煎りでふわりと広がる、熟した果実のような余韻が魅力。
+												アナの豆は、“静けさの中の希望”を感じさせてくれます。
+											</p>
+											<p class="menu_feature_price">￥900 -</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="menu_feature_content">
+										<img
+											src="img/menu_feature_img02.jpg"
+											alt=""
+											class="menu_feature_img"
+										/>
+										<div class="menu_feature_txts menu_feature_txts__luis">
+											<p class="menu_feature_name">LUIS FERNANDO</p>
+											<p class="menu_feature_country">COLOMBIA</p>
+											<p class="menu_feature_desc">
+												朝露の残る高地で、ゆっくりと完熟させた豆だけを収穫。
+												果実感とやわらかな酸味を大切に仕上げています。
+												その一杯が、静かに心に沁みるものであれば嬉しいです。
+											</p>
+											<p class="menu_feature_price">￥700 -</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="menu_feature_content">
+										<img
+											src="img/menu_feature_img03.jpg"
+											alt=""
+											class="menu_feature_img"
+										/>
+										<div class="menu_feature_txts menu_feature_txts__rafael">
+											<p class="menu_feature_name">RAFAEL TORRES</p>
+											<p class="menu_feature_country">ETHIOPIA</p>
+											<p class="menu_feature_desc">
+												野の花に囲まれて育ったエチオピアの豆は、
+												浅煎りで花のような香りと果実の酸味を持ち合わせます。
+												ラファエルの豆は、“高原に広がる花畑”を連想させます。
+											</p>
+											<p class="menu_feature_price">￥800 -</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+					</div>
+					<!-- /.l_container -->
+				</div>
+				<!-- /.l_contents -->
+			</section>
 
-              <p class="menu_limited_desc">
-                光に包まれた高地マルカラから届く、シトラスとチェリーのジューシーな香り
-              </p>
-            </div>
-          </div>
-          <!-- /.l_container -->
-        </div>
-        <!-- /.l_contents -->
-      </section>
-      <!-- /.menu_limited -->
+			<section class="menu_limited">
+				<div class="l_contents">
+					<div class="l_container">
+						<div class="menu_limited_img-wrapper">
+							<img
+								src="img/top_menu_img02.jpg"
+								alt="おすすめ・限定コーヒーの写真"
+								class="menu_limited_img"
+								width="1530"
+								height="640"
+							/>
+						</div>
+						<div class="menu_limited_content">
+							<div class="menu_limited_name-box">
+								<div class="menu_limited_name">
+									<p class="menu_limited_name__en">Luz de Marcala</p>
+									<p class="menu_limited_name__jp">-ルス・デ・マルカラ-</p>
+								</div>
+								<p class="menu_limited_price">￥1,100-</p>
+							</div>
 
-      <section class="menu_drink">
-        <div class="l_contents">
-          <div class="l_container">
-            <ul class="menu_drink_list">
-              <li class="menu_drink_item">
-                <div class="menu_drink_img-wrapper">
-                  <img
-                    src="img/drink_img01.jpg"
-                    alt="コロンビアの写真"
-                    class="menu_drink_img"
-                    width="540"
-                    height="540"
-                  />
-                </div>
-                <div class="menu_drink_txts">
-                  <p class="menu_drink_name">コロンビア</p>
-                  <p class="menu_drink_price">￥700</p>
-                </div>
-              </li>
-              <li class="menu_drink_item">
-                <div class="menu_drink_img-wrapper">
-                  <img
-                    src="img/drink_img02.jpg"
-                    alt="エチオピアの写真"
-                    class="menu_drink_img"
-                    width="540"
-                    height="540"
-                  />
-                </div>
-                <div class="menu_drink_txts">
-                  <p class="menu_drink_name">エチオピア</p>
-                  <p class="menu_drink_price">￥800</p>
-                </div>
-              </li>
-              <li class="menu_drink_item">
-                <div class="menu_drink_img-wrapper">
-                  <img
-                    src="img/drink_img03.jpg"
-                    alt="ホンジュラスの写真"
-                    class="menu_drink_img"
-                    width="540"
-                    height="540"
-                  />
-                </div>
-                <div class="menu_drink_txts">
-                  <p class="menu_drink_name">ホンジュラス</p>
-                  <p class="menu_drink_price">￥900</p>
-                </div>
-              </li>
-              <li class="menu_drink_item">
-                <div class="menu_drink_img-wrapper">
-                  <img
-                    src="img/drink_img04.jpg"
-                    alt="ケニアの写真"
-                    class="menu_drink_img"
-                    width="540"
-                    height="540"
-                  />
-                </div>
-                <div class="menu_drink_txts">
-                  <p class="menu_drink_name">ケニア</p>
-                  <p class="menu_drink_price">￥700</p>
-                </div>
-              </li>
-              <li class="menu_drink_item">
-                <div class="menu_drink_img-wrapper">
-                  <img
-                    src="img/drink_img05.jpg"
-                    alt="ルワンダ・ブルボンの写真"
-                    class="menu_drink_img"
-                    width="540"
-                    height="540"
-                  />
-                </div>
-                <div class="menu_drink_txts">
-                  <p class="menu_drink_name">ルワンダ・ブルボン</p>
-                  <p class="menu_drink_price">￥850</p>
-                </div>
-              </li>
-              <li class="menu_drink_item">
-                <div class="menu_drink_img-wrapper">
-                  <img
-                    src="img/drink_img06.jpg"
-                    alt="パナマ・ゲイシャの写真"
-                    class="menu_drink_img"
-                    width="540"
-                    height="540"
-                  />
-                </div>
-                <div class="menu_drink_txts">
-                  <p class="menu_drink_name">パナマ・ゲイシャ</p>
-                  <p class="menu_drink_price">￥1,500</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- /.l_container -->
-        </div>
-        <!-- /.l_contents -->
-      </section>
-      <!-- /.menu_drink -->
+							<p class="menu_limited_desc">
+								光に包まれた高地マルカラから届く、シトラスとチェリーのジューシーな香り
+							</p>
+						</div>
+					</div>
+					<!-- /.l_container -->
+				</div>
+				<!-- /.l_contents -->
+			</section>
+			<!-- /.menu_limited -->
 
-      <section class="menu_others">
-        <div class="l_contents">
-          <div class="l_container">
-            <div class="menu_others_contents menu_others_contents__food">
-              <div class="menu_others_img-wrapper">
-                <img
-                  src="img/food_img01.jpg"
-                  alt="パスタの写真"
-                  class="menu_others_img"
-                  width="834"
-                  height="568"
-                />
-              </div>
-              <div class="menu_others_desc-box">
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">ナポリタン</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥1,200</p>
-                </div>
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">クロックムッシュ</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥700</p>
-                </div>
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">デリプレート</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥1,000</p>
-                </div>
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">バタートースト</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥800</p>
-                </div>
-              </div>
-            </div>
-            <div class="menu_others_contents menu_others_contents__dessert">
-              <div class="menu_others_img-wrapper">
-                <img
-                  src="img/dessert_img01.jpg"
-                  alt="ケーキの写真"
-                  class="menu_others_img"
-                  width="834"
-                  height="568"
-                />
-              </div>
-              <div class="menu_others_desc-box">
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">レアチーズケーキ</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥550</p>
-                </div>
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">アフォガード</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥500</p>
-                </div>
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">カヌレ</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥400</p>
-                </div>
-                <div class="menu_others_desc">
-                  <p class="menu_others_name">クラシックプリン</p>
-                  <p class="menu_others_dot">・・・・・・</p>
-                  <p class="menu_others_price">￥600</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.l_container -->
-        </div>
-        <!-- /.l_contents -->
-      </section>
-      <!-- /.menu_food-dessert -->
-    </main>
+			<section class="menu_drink">
+				<div class="l_contents">
+					<div class="l_container">
+						<ul class="menu_drink_list">
+							<li class="menu_drink_item">
+								<div class="menu_drink_img-wrapper">
+									<img
+										src="img/drink_img01.jpg"
+										alt="コロンビアの写真"
+										class="menu_drink_img"
+										width="540"
+										height="540"
+									/>
+								</div>
+								<div class="menu_drink_txts">
+									<p class="menu_drink_name">コロンビア</p>
+									<p class="menu_drink_price">￥700</p>
+								</div>
+							</li>
+							<li class="menu_drink_item">
+								<div class="menu_drink_img-wrapper">
+									<img
+										src="img/drink_img02.jpg"
+										alt="エチオピアの写真"
+										class="menu_drink_img"
+										width="540"
+										height="540"
+									/>
+								</div>
+								<div class="menu_drink_txts">
+									<p class="menu_drink_name">エチオピア</p>
+									<p class="menu_drink_price">￥800</p>
+								</div>
+							</li>
+							<li class="menu_drink_item">
+								<div class="menu_drink_img-wrapper">
+									<img
+										src="img/drink_img03.jpg"
+										alt="ホンジュラスの写真"
+										class="menu_drink_img"
+										width="540"
+										height="540"
+									/>
+								</div>
+								<div class="menu_drink_txts">
+									<p class="menu_drink_name">ホンジュラス</p>
+									<p class="menu_drink_price">￥900</p>
+								</div>
+							</li>
+							<li class="menu_drink_item">
+								<div class="menu_drink_img-wrapper">
+									<img
+										src="img/drink_img04.jpg"
+										alt="ケニアの写真"
+										class="menu_drink_img"
+										width="540"
+										height="540"
+									/>
+								</div>
+								<div class="menu_drink_txts">
+									<p class="menu_drink_name">ケニア</p>
+									<p class="menu_drink_price">￥700</p>
+								</div>
+							</li>
+							<li class="menu_drink_item">
+								<div class="menu_drink_img-wrapper">
+									<img
+										src="img/drink_img05.jpg"
+										alt="ルワンダ・ブルボンの写真"
+										class="menu_drink_img"
+										width="540"
+										height="540"
+									/>
+								</div>
+								<div class="menu_drink_txts">
+									<p class="menu_drink_name">ルワンダ・ブルボン</p>
+									<p class="menu_drink_price">￥850</p>
+								</div>
+							</li>
+							<li class="menu_drink_item">
+								<div class="menu_drink_img-wrapper">
+									<img
+										src="img/drink_img06.jpg"
+										alt="パナマ・ゲイシャの写真"
+										class="menu_drink_img"
+										width="540"
+										height="540"
+									/>
+								</div>
+								<div class="menu_drink_txts">
+									<p class="menu_drink_name">パナマ・ゲイシャ</p>
+									<p class="menu_drink_price">￥1,500</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- /.l_container -->
+				</div>
+				<!-- /.l_contents -->
+			</section>
+			<!-- /.menu_drink -->
 
-    <footer class="l_footer js_footer">
-      <div class="l_footer_content-box">
-        <div class="l_footer_content">
-          <div class="l_footer_logo-wrapper">
-            <a href="index.html" class="l_footer_logo-link">
-              <img
-                src="img/logo-black.png"
-                alt="雫のロゴ"
-                class="l_footer_logo"
-                width="200"
-                height="220"
-              />
-            </a>
-          </div>
-        </div>
+			<section class="menu_others">
+				<div class="l_contents">
+					<div class="l_container">
+						<div class="menu_others_contents menu_others_contents__food">
+							<div class="menu_others_img-wrapper">
+								<img
+									src="img/food_img01.jpg"
+									alt="パスタの写真"
+									class="menu_others_img"
+									width="834"
+									height="568"
+								/>
+							</div>
+							<div class="menu_others_desc-box">
+								<div class="menu_others_desc">
+									<p class="menu_others_name">ナポリタン</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥1,200</p>
+								</div>
+								<div class="menu_others_desc">
+									<p class="menu_others_name">クロックムッシュ</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥700</p>
+								</div>
+								<div class="menu_others_desc">
+									<p class="menu_others_name">デリプレート</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥1,000</p>
+								</div>
+								<div class="menu_others_desc">
+									<p class="menu_others_name">バタートースト</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥800</p>
+								</div>
+							</div>
+						</div>
+						<div class="menu_others_contents menu_others_contents__dessert">
+							<div class="menu_others_img-wrapper">
+								<img
+									src="img/dessert_img01.jpg"
+									alt="ケーキの写真"
+									class="menu_others_img"
+									width="834"
+									height="568"
+								/>
+							</div>
+							<div class="menu_others_desc-box">
+								<div class="menu_others_desc">
+									<p class="menu_others_name">レアチーズケーキ</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥550</p>
+								</div>
+								<div class="menu_others_desc">
+									<p class="menu_others_name">アフォガード</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥500</p>
+								</div>
+								<div class="menu_others_desc">
+									<p class="menu_others_name">カヌレ</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥400</p>
+								</div>
+								<div class="menu_others_desc">
+									<p class="menu_others_name">クラシックプリン</p>
+									<p class="menu_others_dot">・・・・・・</p>
+									<p class="menu_others_price">￥600</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.l_container -->
+				</div>
+				<!-- /.l_contents -->
+			</section>
+			<!-- /.menu_food-dessert -->
+		</main>
 
-        <div class="l_footer_content">
-          <ul class="l_footer_nav-list">
-            <li class="l_footer_nav-item">
-              <a href="about.html" class="l_footer_link"> ABOUT </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="news.html" class="l_footer_link"> MENU </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="locations.html" class="l_footer_link"> LOCATIONS </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="news.html" class="l_footer_link"> NEWS </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="online_shop.html" class="l_footer_link"> ONLINE SHOP </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="contact.html" class="l_footer_link"> CONTACT </a>
-            </li>
-          </ul>
-        </div>
+		<footer class="l_footer js_footer">
+			<div class="l_footer_content-box">
+				<div class="l_footer_content">
+					<div class="l_footer_logo-wrapper">
+						<a href="index.html" class="l_footer_logo-link">
+							<img
+								src="img/logo-black.png"
+								alt="雫のロゴ"
+								class="l_footer_logo"
+								width="200"
+								height="220"
+							/>
+						</a>
+					</div>
+				</div>
 
-        <div class="l_footer_content">
-          <div class="l_footer_logo-wrapper-insta">
-            <a href="index.html" class="l_footer_logo-link">
-              <img
-                src="img/instagram-black.png"
-                alt="instagramのロゴ"
-                class="l_footer_logo"
-                width="101"
-                height="100"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
+				<div class="l_footer_content">
+					<ul class="l_footer_nav-list">
+						<li class="l_footer_nav-item">
+							<a href="about.html" class="l_footer_link"> ABOUT </a>
+						</li>
+						<li class="l_footer_nav-item">
+							<a href="news.html" class="l_footer_link"> MENU </a>
+						</li>
+						<li class="l_footer_nav-item">
+							<a href="locations.html" class="l_footer_link"> LOCATIONS </a>
+						</li>
+						<li class="l_footer_nav-item">
+							<a href="news.html" class="l_footer_link"> NEWS </a>
+						</li>
+						<li class="l_footer_nav-item">
+							<a href="online_shop.html" class="l_footer_link"> ONLINE SHOP </a>
+						</li>
+						<li class="l_footer_nav-item">
+							<a href="contact.html" class="l_footer_link"> CONTACT </a>
+						</li>
+					</ul>
+				</div>
 
-      <div class="l_footer_content">
-        <p class="l_footer_shop-name">
-          <span class="l_footer_shop-main">雫</span> -sizuku coffee drip-
-        </p>
-      </div>
+				<div class="l_footer_content">
+					<div class="l_footer_logo-wrapper-insta">
+						<a href="index.html" class="l_footer_logo-link">
+							<img
+								src="img/instagram-black.png"
+								alt="instagramのロゴ"
+								class="l_footer_logo"
+								width="101"
+								height="100"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
 
-      <div class="l_footer_content">
-        <a
-          href="pdf/privacy-policy.pdf"
-          target="_blank"
-          rel="noopener"
-          class="l_footer_link-privacy"
-        >
-          <p class="l_footer_privacy-txt">プライバシーポリシー</p>
-        </a>
-      </div>
-      <small class="l_footer_copyright">
-        <p class="l_footer_copyright-txt">
-          &copy; 2025 sizuku coffee drip. All rights reserved.
-        </p>
-      </small>
-    </footer>
-    <!-- /.l_footer -->
-  </body>
+			<div class="l_footer_content">
+				<p class="l_footer_shop-name">
+					<span class="l_footer_shop-main">雫</span> -sizuku coffee drip-
+				</p>
+			</div>
+
+			<div class="l_footer_content">
+				<a
+					href="pdf/privacy-policy.pdf"
+					target="_blank"
+					rel="noopener"
+					class="l_footer_link-privacy"
+				>
+					<p class="l_footer_privacy-txt">プライバシーポリシー</p>
+				</a>
+			</div>
+			<small class="l_footer_copyright">
+				<p class="l_footer_copyright-txt">
+					&copy; 2025 sizuku coffee drip. All rights reserved.
+				</p>
+			</small>
+		</footer>
+		<!-- /.l_footer -->
+	</body>
 </html>
