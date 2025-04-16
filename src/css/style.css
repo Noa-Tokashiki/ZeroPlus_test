@@ -337,23 +337,31 @@ body {
   color: var(--white-color);
   font-size: 14px;
 }
+.menu_others_contents__dessert {
+  margin-top: 56px;
+}
 .menu_others_img {
   height: 340px;
   object-fit: cover;
 }
-.menu_others_desc {
+.menu_others_desc-box {
   margin-top: 48px;
+}
+.menu_others_desc {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 .menu_others_name {
-  width: 135px;
+  width: 40%;
+}
+.menu_others_dot {
+  text-align: center;
+  letter-spacing: 0.3em;
 }
 .menu_others_price {
-  width: 83px;
-  text-align: right;
+  width: 20%;
 }
-
 /*-- l_footer --*/
 .l_footer_content-box {
   padding-top: 120px;
