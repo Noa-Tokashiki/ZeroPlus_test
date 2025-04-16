@@ -24,16 +24,16 @@ navLinks.forEach((navLink) => {
 document.addEventListener("DOMContentLoaded", function () {
   const topKv = document.querySelector(".top_kv");
   const topMenu = document.querySelector(".top_menu");
-  const topShop = document.querySelector(".top_shop"); // ←追加
+  const topShop = document.querySelector(".top_shop");
   const logoImg = document.getElementById("jsLogoImg");
   const instaImg = document.getElementById("jsLogoImg2");
 
   let isTopKvInView = false;
   let isTopMenuInView = false;
-  let isTopShopInView = false; // ←追加
+  let isTopShopInView = false;
 
   function updateHeaderStyle() {
-    const isLight = isTopKvInView || isTopMenuInView || isTopShopInView; // ←更新
+    const isLight = isTopKvInView || isTopMenuInView || isTopShopInView;
     document.body.classList.toggle("is-light", isLight);
 
     if (logoImg) {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (topKv) kvObserver.observe(topKv);
   if (topMenu) menuObserver.observe(topMenu);
-  if (topShop) shopObserver.observe(topShop); // ←追加
+  if (topShop) shopObserver.observe(topShop);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
