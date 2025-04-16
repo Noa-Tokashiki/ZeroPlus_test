@@ -293,6 +293,28 @@ body {
   }
 }
 
+/*-- menu --*/
+.menu_limited_img {
+  height: 220px;
+  object-fit: cover;
+}
+.menu_limited_name-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.menu_limited_name__en {
+  font-size: 20px;
+  font-weight: bold;
+}
+.menu_limited_name__jp {
+  font-size: 10px;
+}
+.menu_limited_desc {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 /*-- l_footer --*/
 .l_footer_content-box {
   padding-top: 120px;
