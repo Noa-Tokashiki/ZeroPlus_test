@@ -723,7 +723,8 @@ body.is-light .m_hamburger-bar {
 }
 @media screen and (min-width: 1080px) {
   .m_kv {
-    margin-top: calc(120px + 56px);
+    max-width: var(--content-width);
+    margin: calc(120px + 56px) auto 0;
   }
 }
 
