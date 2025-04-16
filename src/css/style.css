@@ -1020,13 +1020,51 @@ body.is-light .m_hamburger-bar {
   font-weight: 600;
   text-align: center;
 }
+@media screen and (min-width: 1080px) {
+  .m_section_title{
+    font-size: 36px;
+  }  
+}
+
+@media screen and (min-width: 1080px) {
+  .online_products_wrap{
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .online_products__flex{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .online_products_list{
   margin-top: 56px;
 }
+@media screen and (min-width: 1080px) {
+  .online_products_list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    justify-content: space-between;
+    gap: 56px;
+  }  
+}
 
 .online_products_item-card:not(:first-child){
   margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+  .online_products_item-card:not(:first-child){
+    margin-top: 0px;
+  }  
+}
+
+@media screen and (min-width: 1080px) {
+  .online_products_item-card{
+    width: 350px;
+  }
 }
 
 .online_products_item-ttl{
@@ -1043,6 +1081,11 @@ body.is-light .m_hamburger-bar {
   font-weight: 600;
   text-align: right;
   margin-top: 8px;
+}
+@media screen and (min-width: 1080px) {
+  .online_products_item-price{
+    margin-top: 16px;
+  }  
 }
 
 .online_add-button{
@@ -1069,6 +1112,11 @@ body.is-light .m_hamburger-bar {
   justify-content: center;
   margin-top: 80px;
   gap: 8px;
+}
+@media screen and (min-width: 1080px) {
+  .m_pagination {
+    margin-top: 56px;
+  }  
 }
 
 .m_pagination_numbers {
@@ -1127,6 +1175,18 @@ body.is-light .m_hamburger-bar {
   width: 200px;
   margin: 116px auto 0;
 }
+@media screen and (min-width: 1080px) {
+  .online_aside_menu{
+    margin: 0;
+    padding-top: 173px;
+  }  
+}
+
+@media screen and (min-width: 1080px) {
+  .online_add-button__aside{
+    margin-top: 0;
+  }
+}
 
 .m_category-menu{
   margin-top: 14px;
@@ -1162,21 +1222,49 @@ body.is-light .m_hamburger-bar {
   font-size: 24px;
   text-align: center;
 }
+@media screen and (min-width: 1080px) {
+  .online_tokusho-ttl{
+    font-size: 36px;
+  }  
+}
 
 .online_tokusho-infobox{
   margin-top: 56px;
+}
+@media screen and (min-width: 1080px) {
+  .online_tokusho-infobox{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 12px;
+  }  
 }
 
 .online_tokusho-label{
   font-weight: 600;
 }
+@media screen and (min-width: 1080px) {
+  .online_tokusho-label{
+    font-size: 18px;
+    width: 295px;
+  }  
+}
 
 .online_tokusho-label:not(:first-child){
   margin-top: 32px;
 }
+@media screen and (min-width: 1080px) {
+  .online_tokusho-label:not(:first-child){
+    margin-top: 0px;
+  }  
+}
 
 .online_tokusho-value{
   font-size: 14px;
+}
+@media screen and (min-width: 1080px) {
+  .online_tokusho-value{
+    font-size: 16px;
+  }  
 }
 
 
