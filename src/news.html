@@ -1,241 +1,329 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <!-- 文字コードと表示設定 -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- タイトル（ページタイトルを変更） -->
-    <title>雫 - sizuku coffee drip -</title>
+<head>
+  <!-- 文字コードと表示設定 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- ページの説明（SEOに重要） -->
-    <meta
-      name="description"
-      content="浅煎りシングルオリジンのコーヒー専門店『雫 - sizuku coffee drip -』。丁寧なハンドドリップと静かな時間をお届けします。"
-    />
-    <meta name="format-detection" content="telephone=no" />
+  <!-- タイトル（ページタイトルを変更） -->
+  <title>雫 - sizuku coffee drip -</title>
 
-    <!-- favicon / アイコン（必要に応じて変更） -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="webclip.png" />
+  <!-- ページの説明（SEOに重要） -->
+  <meta name="description" content="浅煎りシングルオリジンのコーヒー専門店『雫 - sizuku coffee drip -』。丁寧なハンドドリップと静かな時間をお届けします。" />
+  <meta name="format-detection" content="telephone=no" />
 
-    <!-- OGP設定（SNSでの見え方） -->
-    <meta property="og:site_name" content="雫 - sizuku coffee drip -" />
-    <meta property="og:url" content="https://example.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="雫 -sizuku coffee drip-" />
-    <meta
-      property="og:description"
-      content="浅煎りシングルオリジンのコーヒーを、手仕事で。静かな時間を味わうカフェ体験。"
-    />
-    <meta property="og:image" content="https://example.com/ogp.jpg" />
-    <meta property="og:locale" content="ja_JP" />
+  <!-- favicon / アイコン（必要に応じて変更） -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="webclip.png" />
 
-    <!-- Twitterカード設定 -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Twitter用説明文" />
-    <meta name="twitter:image:src" content="https://example.com/ogp.jpg" />
+  <!-- OGP設定（SNSでの見え方） -->
+  <meta property="og:site_name" content="雫 - sizuku coffee drip -" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="雫 -sizuku coffee drip-" />
+  <meta property="og:description" content="浅煎りシングルオリジンのコーヒーを、手仕事で。静かな時間を味わうカフェ体験。" />
+  <meta property="og:image" content="https://example.com/ogp.jpg" />
+  <meta property="og:locale" content="ja_JP" />
 
-    <!-- Google Fonts（変更可能） -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Twitterカード設定 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="Twitter用説明文" />
+  <meta name="twitter:image:src" content="https://example.com/ogp.jpg" />
 
-    <!-- CSS（必要に応じて変更） -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Fonts（変更可能） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- JavaScript（必要に応じて変更） -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/index.js" defer></script>
-    <script src="js/main.js" defer></script>
-  </head>
+  <!-- CSS（必要に応じて変更） -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <body class="js_body">
-    <header class="l_header l_bg js_header">
-      <a href="index.html" class="l_header-logo_link">
-        <img
-          src="img/logo-white.png"
-          class="l_header-logo_img"
-          id="jsLogoImg"
-          alt="サイトロゴ"
-          width="50"
-          height="55"
-        />
-      </a>
+  <!-- JavaScript（必要に応じて変更） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/index.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
 
-      <nav class="l_header-nav js_navigation">
-        <div class="l_header-nav_inner">
-          <!-- メニュー -->
-          <ul class="l_header-nav_list">
-            <li class="l_header-nav_item l_header-nav_item-color">
-              <a href="about.html" class="l_header-nav_link">ABOUT</a>
-            </li>
-            <li class="l_header-nav_item l_header-nav_item-color">
-              <a href="menu.html" class="l_header-nav_link">MENU</a>
-            </li>
-            <li class="l_header-nav_item l_header-nav_item-color">
-              <a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
-            </li>
-            <li class="l_header-nav_item l_header-nav_item-color">
-              <a href="news.html" class="l_header-nav_link">NEWS</a>
-            </li>
-            <li class="l_header-nav_item l_header-nav_item-color">
-              <a href="online_shop.html" class="l_header-nav_link"
-                >ONLINE SHOP</a
-              >
-            </li>
-            <li class="l_header-nav_item l_header-nav_item-color">
-              <a href="contact.html" class="l_header-nav_link">CONTACT</a>
-            </li>
-          </ul>
+<body class="js_body">
+  <header class="l_header l_bg js_header">
+    <a href="index.html" class="l_header-logo_link">
+      <img src="img/logo-white.png" class="l_header-logo_img" id="jsLogoImg" alt="サイトロゴ" width="50" height="55" />
+    </a>
 
-          <!-- 追加テキスト -->
-          <p class="l_header-nav_msg">
-            <span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee drip-
-          </p>
+    <nav class="l_header-nav js_navigation">
+      <div class="l_header-nav_inner">
+        <!-- メニュー -->
+        <ul class="l_header-nav_list">
+          <li class="l_header-nav_item l_header-nav_item-color">
+            <a href="about.html" class="l_header-nav_link">ABOUT</a>
+          </li>
+          <li class="l_header-nav_item l_header-nav_item-color">
+            <a href="menu.html" class="l_header-nav_link">MENU</a>
+          </li>
+          <li class="l_header-nav_item l_header-nav_item-color">
+            <a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
+          </li>
+          <li class="l_header-nav_item l_header-nav_item-color">
+            <a href="news.html" class="l_header-nav_link">NEWS</a>
+          </li>
+          <li class="l_header-nav_item l_header-nav_item-color">
+            <a href="online_shop.html" class="l_header-nav_link">ONLINE SHOP</a>
+          </li>
+          <li class="l_header-nav_item l_header-nav_item-color">
+            <a href="contact.html" class="l_header-nav_link">CONTACT</a>
+          </li>
+        </ul>
 
-          <!-- ロゴ -->
-          <a href="index.html" class="l_header-nav_logo">
-            <img
-              src="img/logo-white.png"
-              alt="サイトロゴ"
-              width="80"
-              height="88"
-            />
-          </a>
+        <!-- 追加テキスト -->
+        <p class="l_header-nav_msg">
+          <span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee drip-
+        </p>
 
-          <!-- インスタ -->
-          <a href="#" class="l_header-nav_insta">
-            <img
-              src="img/instagram-white.png"
-              alt="インスタグラムロゴ"
-              width="50"
-              height="51"
-            />
+        <!-- ロゴ -->
+        <a href="index.html" class="l_header-nav_logo">
+          <img src="img/logo-white.png" alt="サイトロゴ" width="80" height="88" />
+        </a>
+
+        <!-- インスタ -->
+        <a href="#" class="l_header-nav_insta">
+          <img src="img/instagram-white.png" alt="インスタグラムロゴ" width="50" height="51" />
+        </a>
+      </div>
+    </nav>
+
+    <a href="#" class="l_header-logo_link">
+      <img src="img/instagram-white.png" id="jsLogoImg2" class="l_header-logo_img" alt="インスタグラムロゴ" width="50"
+        height="51" />
+    </a>
+
+    <button class="m_hamburger js_hamburger">
+      <span class="m_hamburger-bar m_hamburger-bar-color"></span>
+      <span class="m_hamburger-bar m_hamburger-bar-color"></span>
+      <span class="m_hamburger-bar m_hamburger-bar-color"></span>
+    </button>
+  </header>
+  <!-- /.l_header -->
+
+  <div class="m_kv">
+    <h1 class="m_kv_title">MENU</h1>
+    <div class="m_kv_bg-wrapper">
+      <img class="m_kv_bg" src="img/top_menu_img01.jpg" alt="" width="556" height="835" />
+    </div>
+  </div>
+
+  <main class="l_main">
+    <section class="news_article">
+      <div class="l_contents">
+        <div class="l_container-lg">
+          <div class="news_article_wrap">
+            <h2 class="m_section_title">WHAT’S BREWING</h2>
+
+            <div class="online_products_list">
+              <article class="online_products_item-card">
+                <a href="news-single.html" class="news_article_link">
+                  <img src="./img/news_article01.jpg" alt="店内に男の人が立ってる写真" class="news_article_item-img" />
+                  <div class="news_meta">
+                    <time class="news_meta_date">2025.04.20</time>
+                    <span class="top_news_category">NEWS</span>
+                  </div>
+                  <h3 class="news_item_ttl">
+                    新店舗オープンのお知らせ
+                  </h3>
+                  <p class="online_products_item-des">
+                    いつも「雫 -shizuku coffee drip-」をご愛顧いただき…
+                  </p>
+                  <p class="m_link-txt">read more
+                  </p>
+                </a>
+              </article>
+
+              <article class="online_products_item-card">
+                <a href="news-single.html" class="news_article_link">
+                  <img src="./img/news_article02.jpg" alt="コーヒーを淹れてる淹れてる写真" class="news_article_item-img" />
+                  <div class="news_meta">
+                    <time class="news_meta_date">2025.04.12</time>
+                    <span class="top_news_category">EVENT</span>
+                  </div>
+                  <h3 class="news_item_ttl">
+                    ハンドドリップ体験イベント開催
+                  </h3>
+                  <p class="online_products_item-des">
+                    コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただき…
+                  </p>
+                  <p class="m_link-txt">read more
+                  </p>
+                </a>
+              </article>
+
+              <article class="online_products_item-card">
+                <a href="news-single.html" class="news_article_link">
+                  <img src="./img/news_article03.jpg" alt="葉っぱとコーヒーの写真" class="news_article_item-img" />
+                  <div class="news_meta">
+                    <time class="news_meta_date">2025.04.01</time>
+                    <span class="top_news_category">BEANS</span>
+                  </div>
+                  <h3 class="news_item_ttl">
+                    【数量限定】春のシングルオリジン
+                  </h3>
+                  <p class="online_products_item-des">
+                    春の訪れとともに、数量限定で「春のシングルオリジン豆」をご用意いた…
+                  </p>
+                  <p class="m_link-txt">read more
+                  </p>
+                </a>
+              </article>
+
+              <article class="online_products_item-card">
+                <a href="news-single.html" class="news_article_link">
+                  <img src="./img/news_article01.jpg" alt="店内に男の人が立ってる写真" class="news_article_item-img" />
+                  <div class="news_meta">
+                    <time class="news_meta_date">2025.04.20</time>
+                    <span class="top_news_category">NEWS</span>
+                  </div>
+                  <h3 class="news_item_ttl">
+                    新店舗オープンのお知らせ
+                  </h3>
+                  <p class="online_products_item-des">
+                    いつも「雫 -shizuku coffee drip-」をご愛顧いただき…
+                  </p>
+                  <p class="m_link-txt">read more
+                  </p>
+                </a>
+              </article>
+
+              <article class="online_products_item-card">
+                <a href="news-single.html" class="news_article_link">
+                  <img src="./img/news_article02.jpg" alt="コーヒーを淹れてる淹れてる写真" class="news_article_item-img" />
+                  <div class="news_meta">
+                    <time class="news_meta_date">2025.04.12</time>
+                    <span class="top_news_category">EVENT</span>
+                  </div>
+                  <h3 class="news_item_ttl">
+                    ハンドドリップ体験イベント開催
+                  </h3>
+                  <p class="online_products_item-des">
+                    コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただき…
+                  </p>
+                  <p class="m_link-txt">read more
+                  </p>
+                </a>
+              </article>
+
+              <article class="online_products_item-card">
+                <a href="news-single.html" class="news_article_link">
+                  <img src="./img/news_article03.jpg" alt="葉っぱとコーヒーの写真" class="news_article_item-img" />
+                  <div class="news_meta">
+                    <time class="news_meta_date">2025.04.01</time>
+                    <span class="top_news_category">BEANS</span>
+                  </div>
+                  <h3 class="news_item_ttl">
+                    【数量限定】春のシングルオリジン
+                  </h3>
+                  <p class="online_products_item-des">
+                    春の訪れとともに、数量限定で「春のシングルオリジン豆」をご用意いた…
+                  </p>
+                  <p class="m_link-txt">read more
+                  </p>
+                </a>
+              </article>
+
+            <!-- pagination -->
+            <div class="m_pagination">
+              <a href="" class="m_pagination_numbers m_pagination_numbers__before"></a>
+              <span class="m_pagination_numbers m_pagination_numbers__current">1</span>
+              <a href="" class="m_pagination_numbers">2</a>
+              <span class="m_pagination_numbers m_pagination_numbers__between">…</span>
+              <a href="" class="m_pagination_numbers">10</a>
+              <a href="" class="m_pagination_numbers m_pagination_numbers__next"></a>
+            </div>
+            <!-- /pagination -->
+          </div>
+
+
+
+            <!-- m_aside category -->
+            <aside class="m_category-menu">
+              <h2 class="m_category-menu_ttl">カテゴリから探す</h2>
+              <ul class="m_category-menu_list">
+                <li><a href="" class="m_category-menu_item">NEWS</a></li>
+                <li><a href="" class="m_category-menu_item">EVENT</a></li>
+                <li><a href="" class="m_category-menu_item">BEANS</a></li>
+              </ul>
+            </aside>
+            <!-- /m_aside -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="l_footer js_footer">
+    <div class="l_footer_content-box">
+      <div class="l_footer_content">
+        <div class="l_footer_logo-wrapper">
+          <a href="index.html" class="l_footer_logo-link">
+            <img src="img/logo-black.png" alt="雫のロゴ" class="l_footer_logo" width="200" height="220" />
           </a>
         </div>
-      </nav>
+      </div>
 
-      <a href="#" class="l_header-logo_link">
-        <img
-          src="img/instagram-white.png"
-          id="jsLogoImg2"
-          class="l_header-logo_img"
-          alt="インスタグラムロゴ"
-          width="50"
-          height="51"
-        />
-      </a>
+      <div class="l_footer_content">
+        <ul class="l_footer_nav-list">
+          <li class="l_footer_nav-item">
+            <a href="about.html" class="l_footer_link"> ABOUT </a>
+          </li>
+          <li class="l_footer_nav-item">
+            <a href="news.html" class="l_footer_link"> MENU </a>
+          </li>
+          <li class="l_footer_nav-item">
+            <a href="locations.html" class="l_footer_link"> LOCATIONS </a>
+          </li>
+          <li class="l_footer_nav-item">
+            <a href="news.html" class="l_footer_link"> NEWS </a>
+          </li>
+          <li class="l_footer_nav-item">
+            <a href="online_shop.html" class="l_footer_link"> ONLINE SHOP </a>
+          </li>
+          <li class="l_footer_nav-item">
+            <a href="contact.html" class="l_footer_link"> CONTACT </a>
+          </li>
+        </ul>
+      </div>
 
-      <button class="m_hamburger js_hamburger">
-        <span class="m_hamburger-bar m_hamburger-bar-color"></span>
-        <span class="m_hamburger-bar m_hamburger-bar-color"></span>
-        <span class="m_hamburger-bar m_hamburger-bar-color"></span>
-      </button>
-    </header>
-    <!-- /.l_header -->
-
-    <div class="m_kv">
-      <h1 class="m_kv_title">MENU</h1>
-      <div class="m_kv_bg-wrapper">
-        <img
-          class="m_kv_bg"
-          src="img/top_menu_img01.jpg"
-          alt=""
-          width="556"
-          height="835"
-        />
+      <div class="l_footer_content">
+        <div class="l_footer_logo-wrapper-insta">
+          <a href="index.html" class="l_footer_logo-link">
+            <img src="img/instagram-black.png" alt="instagramのロゴ" class="l_footer_logo" width="101" height="100" />
+          </a>
+        </div>
       </div>
     </div>
 
-    <footer class="l_footer js_footer">
-      <div class="l_footer_content-box">
-        <div class="l_footer_content">
-          <div class="l_footer_logo-wrapper">
-            <a href="index.html" class="l_footer_logo-link">
-              <img
-                src="img/logo-black.png"
-                alt="雫のロゴ"
-                class="l_footer_logo"
-                width="200"
-                height="220"
-              />
-            </a>
-          </div>
-        </div>
+    <div class="l_footer_content">
+      <p class="l_footer_shop-name">
+        <span class="l_footer_shop-main">雫</span> -sizuku coffee drip-
+      </p>
+    </div>
 
-        <div class="l_footer_content">
-          <ul class="l_footer_nav-list">
-            <li class="l_footer_nav-item">
-              <a href="about.html" class="l_footer_link"> ABOUT </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="news.html" class="l_footer_link"> MENU </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="locations.html" class="l_footer_link"> LOCATIONS </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="news.html" class="l_footer_link"> NEWS </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="online_shop.html" class="l_footer_link"> ONLINE SHOP </a>
-            </li>
-            <li class="l_footer_nav-item">
-              <a href="contact.html" class="l_footer_link"> CONTACT </a>
-            </li>
-          </ul>
-        </div>
+    <div class="l_footer_content">
+      <a href="pdf/privacy-policy.pdf" target="_blank" rel="noopener" class="l_footer_link-privacy">
+        <p class="l_footer_privacy-txt">プライバシーポリシー</p>
+      </a>
+    </div>
+    <small class="l_footer_copyright">
+      <p class="l_footer_copyright-txt">
+        &copy; 2025 sizuku coffee drip. All rights reserved.
+      </p>
+    </small>
+  </footer>
+  <!-- /.l_footer -->
+</body>
 
-        <div class="l_footer_content">
-          <div class="l_footer_logo-wrapper-insta">
-            <a href="index.html" class="l_footer_logo-link">
-              <img
-                src="img/instagram-black.png"
-                alt="instagramのロゴ"
-                class="l_footer_logo"
-                width="101"
-                height="100"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="l_footer_content">
-        <p class="l_footer_shop-name">
-          <span class="l_footer_shop-main">雫</span> -sizuku coffee drip-
-        </p>
-      </div>
-
-      <div class="l_footer_content">
-        <a
-          href="pdf/privacy-policy.pdf"
-          target="_blank"
-          rel="noopener"
-          class="l_footer_link-privacy"
-        >
-          <p class="l_footer_privacy-txt">プライバシーポリシー</p>
-        </a>
-      </div>
-      <small class="l_footer_copyright">
-        <p class="l_footer_copyright-txt">
-          &copy; 2025 sizuku coffee drip. All rights reserved.
-        </p>
-      </small>
-    </footer>
-    <!-- /.l_footer -->
-  </body>
 </html>
