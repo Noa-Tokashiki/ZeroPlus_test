@@ -1522,6 +1522,52 @@ body.is-light .m_hamburger-bar {
 
 /* ---------------- locations ---------------- */
 
+.locations_desc{
+  width: 961px;
+  height: 320px;
+  margin-top: 56px;
+  display: flex;
+}
+
+.locations_img01{
+  width: 569px;
+  right: 120px;
+}
+
+.locations_desc_text{
+  padding-left: 120px;
+  padding-top: 22px;
+}
+
+.locations_heading{
+  font-size: 24px;
+}
+
+.locations_tr{
+  display: flex;
+  font-size: 16px;
+}
+
+.locations_tr_wapper{
+  margin-top: 31px;
+  line-height: 1.9;
+}
+
+.locations_tr_title{
+  
+}
+.location_tr_aa{
+  display: block;
+}
+
+.locations_tr_text{
+  align-items: flex-start;
+}
+
+.locations_tr_link{
+
+}
+
 /* -------------------- news ------------------*/
 
 /* ----- news-single ------- */
