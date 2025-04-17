@@ -676,6 +676,21 @@ body.is-light .m_hamburger-bar {
   background-color: var(--accent-color);
   color: var(--white-color);
   border-radius: 100vh;
+
+  transition: opacity 1s ease; /* 画像の切替時の背景色もぬるっと変わるやつ */
+}
+
+/* ---- button-hover ---- */
+.m_btn:hover{
+  background-color: var(--white-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition-duration: 1s;
+}
+
+.m_btn:hover .online_cart-icon{
+  content: url(../img/shop-logo_hover.jpg);
+  transition-duration: 1s;
 }
 
 /* ---- pagination ---- */
@@ -704,7 +719,7 @@ body.is-light .m_hamburger-bar {
 }
 
 .m_pagination_numbers__current {
-  color: #fff;
+  color: var(--white-color);
   background: var(--accent-color);
 }
 
