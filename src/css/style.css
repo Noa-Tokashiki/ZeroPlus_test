@@ -86,7 +86,7 @@ body {
   z-index: var(--z-index-header);
   height: 34px;
   width: 100%;
-  padding: 0 16px;
+  padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,7 +125,7 @@ body {
 }
 
 .l_header-logo_link {
-  height: 34px;
+  height: 35px;
   width: 30px;
   display: flex;
   align-items: center;
@@ -171,19 +171,24 @@ body {
 
 .l_header-nav_inner {
   height: 100%;
-  position: relative;
+  /* position: relative; */
   background-image: url("../img/nav-logo.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
 }
 
 .l_header-nav_list {
-  position: absolute;
+  /* position: absolute;
   top: 10%;
-  left: 15%;
+  left: 15%; */
   display: flex;
   flex-direction: column;
   gap: 38px;
+  padding-left: 48px;
 }
 
 .l_header-nav_item {
@@ -192,13 +197,21 @@ body {
   font-weight: bold;
 }
 
+.l_header_nav-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding-right: 16px;
+}
+
 .l_header-nav_msg {
-  position: absolute;
+  /* position: absolute; */
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  top: 10%;
+  /* top: 10%;
   left: 90%;
-  transform: translateX(-20%);
+  transform: translateX(-20%); */
   color: var(--white-color);
   font-size: 16px;
   font-weight: bold;
@@ -210,20 +223,25 @@ body {
   transform: rotate(90deg); /* ← 雫だけを90度回転 */
   transform-origin: center;
 }
-
+.l_header_nav-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 .l_header-nav_logo {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 80%;
-  width: 56px;
-  height: 53px;
+  left: 80%; */
+  width: 50px;
+  height: 55px;
 }
 
 .l_header-nav_insta {
-  position: absolute;
+  /* position: absolute;
   top: 60%;
   left: 85%;
-  transform: translateX(-25%);
+  transform: translateX(-25%); */
   width: 35px;
   height: 35px;
 }
@@ -260,6 +278,7 @@ body {
     height: 56px;
     width: 100%;
     padding: 0 56px;
+    margin-top: 0;
   }
 
   .l_header-nav_list {
@@ -270,6 +289,7 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
+    padding-left: 0;
   }
 
   .l_header-nav_item {
