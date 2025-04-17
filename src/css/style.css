@@ -556,6 +556,7 @@ body.is-light .m_hamburger-bar {
   transform: translateX(50%);
   border-radius: 9999px;
   background-color: var(--black-color);
+  display: block;
 }
 .top_menu .m_section_link-arrow {
   width: 120px;
@@ -764,6 +765,7 @@ body.is-light .m_hamburger-bar {
   right: 0;
   border-radius: 9999px;
   background-color: var(--black-color);
+  display: block;
 }
 
 /* -------- top_kv --------- */
