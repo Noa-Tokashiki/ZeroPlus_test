@@ -903,6 +903,7 @@ body.is-light .m_hamburger-bar {
   margin-top: 48px;
 }
 
+
 /* ------- top_menu -------- */
 .top_menu {
   background-color: var(--primary-color);
@@ -1250,9 +1251,115 @@ body.is-light .m_hamburger-bar {
 }
 
 /* ----------------- about ------------------- */
+.about_txt_box{
+  line-height: 200%;
+}
+.about_txt{
+  font-size: 16px;
+  font-weight: bold;
+}
+.about_txt-sub{
+  font-size: 14px;
+  margin-top: 56px;
+}
 
+.about_bg_box{
+  background-image: url(../img/about_bg_sm.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background: linear-gradient(rgba(124,118,110,0.2)),url(../img/about_bg_sm.jpg); */
+}
+.about_bg_txt{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.about_story_box:first-child{
+  margin-top: 56px;
+}
+.about_story_box:not(:first-child){
+  margin-top: 48px;
+}
+.about_story-content{
+  margin-top: 8px;
+  position: relative;
+}
+.about_story-name{
+  font-size: 16px;
+}
+.about_story-place{
+  font-size: 24px;
+  font-weight: bold;
+}
+.about_story-more_component{
+  width: 108px;
+  height: 24px;
+  border-bottom: 0.5px solid var(--black-color);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.about_story-more_component::after{
+  width: 9px;
+  height: 0.5px;
+  background: var(--black-color);
+  transform: rotate(-45deg);
+  right: 0;
+}
+.about_story-full_story{
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_sustain{
+  background-color: var(--primary-color);
+}
+.about_section_title-sub{
+  color: var(--white-color);
+  text-align: center;
+  margin-top: 16px;
+}
+.about_sustain-txt_ttl{
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+.about_sustain-txt{
+  color: var(--white-color);
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.about_sustain-box{
+  margin-top: 48px;
+}
 /* ----- about-story ------ */
-
+.about-story-img_box{
+  margin-top: 56px;
+}
+.about-story_txt-message{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 56px;
+  letter-spacing: 0.1em;
+  margin-bottom: 56px;
+}
+.about-story_txt{
+  font-size: 14px;
+}
+.about-story_txt:not(:first-child){
+  margin-top: 32px;
+}
+.about-story_bg{
+  background: var(--accent-color);
+}
 /* ------------------- menu ------------------ */
 .swiper-container {
   position: relative;
