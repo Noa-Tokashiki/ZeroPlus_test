@@ -350,7 +350,6 @@ body {
 .l_two-column__aside {
   width: 200px;
   margin: 120px auto 0;
-  border: solid 1px red;
 }
 @media screen and (min-width: 1080px) {
   .l_two-column__aside {
@@ -658,55 +657,6 @@ body.is-light .m_hamburger-bar {
   background-color: var(--accent-color);
 }
 
-
-
-.m_link-wrap{
-  text-align: right;
-  position: relative;
-}
-
-.m_link-box__kasou{
-  margin-top: 54px;
-}
-
-.m_link-box__kasou:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
-}
-
-.m_link-txt__kasou {
-  font-size: 16px;
-  font-weight: bold;
-  /* position: relative; */
-  padding-right: 16px;
-}
-
-.m_section_link-arrow__kasou {
-  position: absolute;
-  width: 108px;
-  height: 0.5px;
-  right: 0;
-  /* transform: translateX(50%); */
-  border-radius: 9999px;
-  background-color: var(--black-color);
-  display: block;
-}
-
-.m_section_link-arrow__kasou::before {
-  content: "";
-  position: absolute;
-  top: calc(50% - 0.5px);
-  right: 0;
-  width: 9.15px;
-  height: 0.5px;
-  border-radius: 9999px;
-  transform: rotate(45deg);
-  transform-origin: calc(100% - 0.5px) 50%;
-  background-color: var(--black-color);
-}
-
-
-
 /* 木 */
 .m_backgruond_img-box {
   background-image: url("../img/image.png");
@@ -911,7 +861,6 @@ body.is-light .m_hamburger-bar {
     gap: 56px;
   }
 }
-
 
 /*--------------- main --------------*/
 /*----------- top --------*/
@@ -1944,12 +1893,6 @@ body.is-light .m_hamburger-bar {
 /* -------------------- news ------------------*/
 
 @media screen and (min-width: 1080px) {
-  .news_article_wrapper {
-    border: solid 1px red;
-  }
-}
-
-@media screen and (min-width: 1080px) {
   .m_article_list {
     display: flex;
   }
@@ -1959,15 +1902,21 @@ body.is-light .m_hamburger-bar {
   margin-top: 24px;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .news_article_post {
     display: flex;
+    gap: 16px;
   }
 }
 
 .news_article_item-img {
-  width: 311px;
   height: 207px;
+  object-fit: cover;
+}
+@media screen and (min-width: 1080px) {
+  .news_article_item-img {
+    width: 400px;
+  }
 }
 
 .news_meta {
