@@ -846,8 +846,7 @@ body.is-light .m_hamburger-bar {
 .m_category-menu_item::after {
   content: ">";
 }
-
-/*------------article------------*/
+/* /------------article------------/ */
 
 .m_article_list {
   margin-top: 56px;
