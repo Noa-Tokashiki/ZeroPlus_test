@@ -348,12 +348,12 @@ body {
   }
 }
 .l_two-column__aside {
-  width: 200px;
   margin: 120px auto 0;
 }
 @media screen and (min-width: 1080px) {
   .l_two-column__aside {
     margin: 173px 0 0 0;
+    width: 200px;
   }
 }
 
