@@ -552,23 +552,23 @@ body.is-light .m_hamburger-bar {
 }
 
 /* リンク */
-.m_link-box {
+.m_arrow-wrapper {
   display: block;
   margin-top: 54px;
   text-align: center;
 }
-.m_link-box:hover {
+.m_arrow-wrapper:hover {
   color: var(--accent-color);
   text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
 
-.m_link-txt {
+.m_arrow-txt {
   font-size: 16px;
   font-weight: bold;
   position: relative;
 }
 
-.m_section_link-arrow {
+.m_arrow {
   position: absolute;
   width: 180px;
   height: 0.5px;
@@ -578,15 +578,15 @@ body.is-light .m_hamburger-bar {
   background-color: var(--black-color);
   display: block;
 }
-.top_menu .m_section_link-arrow {
+.top_menu .m_arrow {
   width: 120px;
   background-color: var(--white-color);
 }
-.top_news .m_section_link-arrow {
+.top_news .m_arrow {
   width: 120px;
 }
 
-.m_section_link-arrow::before {
+.m_arrow::before {
   content: "";
   position: absolute;
   top: calc(50% - 0.5px);
@@ -598,12 +598,12 @@ body.is-light .m_hamburger-bar {
   transform-origin: calc(100% - 0.5px) 50%;
   background-color: var(--black-color);
 }
-.top_menu .m_section_link-arrow::before {
+.top_menu .m_arrow::before {
   background-color: var(--white-color);
 }
 
-.m_link-box:hover .m_section_link-arrow,
-.m_link-box:hover .m_section_link-arrow::before {
+.m_arrow-wrapper:hover .m_arrow,
+.m_arrow-wrapper:hover .m_arrow::before {
   background-color: var(--accent-color);
 }
 
@@ -1043,11 +1043,11 @@ body.is-light .m_hamburger-bar {
   }
 }
 
-.top_menu .m_link-box {
+.top_menu .m_arrow-wrapper {
   color: var(--white-color);
 }
 
-.top_menu .m_link-box:hover {
+.top_menu .m_arrow-wrapper:hover {
   color: var(--accent-color);
   text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
