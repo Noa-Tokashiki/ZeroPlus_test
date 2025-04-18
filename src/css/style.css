@@ -562,14 +562,6 @@ body.is-light .m_hamburger-bar {
   text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
 
-.m_link-box__kasou {
-  text-align: right;
-  position: relative;
-  margin-top: 0;
-  z-index: 2;
-  transition: color 0.3s ease;
-}
-
 .m_arrow-wrapper__kasou {
   text-align: right;
   position: relative;
