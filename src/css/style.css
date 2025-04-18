@@ -2068,6 +2068,7 @@ body.is-light .m_hamburger-bar {
   height: 10px;
   flex-shrink: 0;
   position: relative;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .contact_faq_mark::before {
@@ -2082,8 +2083,9 @@ body.is-light .m_hamburger-bar {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.contact_faq_mark.js_faq_mark {
-  transform: rotate(90deg);
+.contact_faq_mark.js_faq_mark.is-open {
+  transform: rotate(90deg) translate(50%, 50%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .content_faq_open {
@@ -2107,7 +2109,11 @@ body.is-light .m_hamburger-bar {
 }
 
 .js_faq-a {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
+
 .contact_faq_content__a {
   align-items: flex-start;
 }
