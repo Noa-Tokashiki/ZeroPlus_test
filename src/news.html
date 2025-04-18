@@ -54,53 +54,60 @@
 <body class="js_body">
   <header class="l_header l_bg js_header">
     <a href="index.html" class="l_header-logo_link">
-      <img src="img/logo-white.png" class="l_header-logo_img" id="jsLogoImg" alt="サイトロゴ" width="50" height="55" />
+      <img src="img/logo-white.png" class="l_header-logo_img" id="jsLogoImg" alt="サイトロゴ" width="100" height="110" />
     </a>
 
     <nav class="l_header-nav js_navigation">
       <div class="l_header-nav_inner">
         <!-- メニュー -->
-        <ul class="l_header-nav_list">
-          <li class="l_header-nav_item l_header-nav_item-color">
-            <a href="about.html" class="l_header-nav_link">ABOUT</a>
-          </li>
-          <li class="l_header-nav_item l_header-nav_item-color">
-            <a href="menu.html" class="l_header-nav_link">MENU</a>
-          </li>
-          <li class="l_header-nav_item l_header-nav_item-color">
-            <a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
-          </li>
-          <li class="l_header-nav_item l_header-nav_item-color">
-            <a href="news.html" class="l_header-nav_link">NEWS</a>
-          </li>
-          <li class="l_header-nav_item l_header-nav_item-color">
-            <a href="online_shop.html" class="l_header-nav_link">ONLINE SHOP</a>
-          </li>
-          <li class="l_header-nav_item l_header-nav_item-color">
-            <a href="contact.html" class="l_header-nav_link">CONTACT</a>
-          </li>
-        </ul>
+        <div class="l_header-nav_list-wrapper">
+          <ul class="l_header-nav_list">
+            <li class="l_header-nav_item l_header-nav_item-color">
+              <a href="about.html" class="l_header-nav_link">ABOUT</a>
+            </li>
+            <li class="l_header-nav_item l_header-nav_item-color">
+              <a href="menu.html" class="l_header-nav_link">MENU</a>
+            </li>
+            <li class="l_header-nav_item l_header-nav_item-color">
+              <a href="locations.html" class="l_header-nav_link">LOCATIONS</a>
+            </li>
+            <li class="l_header-nav_item l_header-nav_item-color">
+              <a href="news.html" class="l_header-nav_link">NEWS</a>
+            </li>
+            <li class="l_header-nav_item l_header-nav_item-color">
+              <a href="online_shop.html" class="l_header-nav_link">ONLINE SHOP</a>
+            </li>
+            <li class="l_header-nav_item l_header-nav_item-color">
+              <a href="contact.html" class="l_header-nav_link">CONTACT</a>
+            </li>
+          </ul>
+        </div>
 
-        <!-- 追加テキスト -->
-        <p class="l_header-nav_msg">
-          <span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee drip-
-        </p>
+        <div class="l_header_nav-side">
+          <!-- 追加テキスト -->
+          <p class="l_header-nav_msg">
+            <span class="l_header-nav_msg-rotate">雫</span> -sizuku coffee
+            drip-
+          </p>
 
-        <!-- ロゴ -->
-        <a href="index.html" class="l_header-nav_logo">
-          <img src="img/logo-white.png" alt="サイトロゴ" width="80" height="88" />
-        </a>
+          <div class="l_header_nav-icons">
+            <!-- ロゴ -->
+            <a href="index.html" class="l_header-nav_logo">
+              <img src="img/logo-white.png" alt="サイトロゴ" width="100" height="110" />
+            </a>
 
-        <!-- インスタ -->
-        <a href="#" class="l_header-nav_insta">
-          <img src="img/instagram-white.png" alt="インスタグラムロゴ" width="50" height="51" />
-        </a>
+            <!-- インスタ -->
+            <a href="#" class="l_header-nav_insta">
+              <img src="img/instagram-white.png" alt="インスタグラムロゴ" width="100" height="100" />
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
 
     <a href="#" class="l_header-logo_link">
-      <img src="img/instagram-white.png" id="jsLogoImg2" class="l_header-logo_img" alt="インスタグラムロゴ" width="50"
-        height="51" />
+      <img src="img/instagram-white.png" id="jsLogoImg2" class="l_header-logo_img" alt="インスタグラムロゴ" width="100"
+        height="100" />
     </a>
 
     <button class="m_hamburger js_hamburger">
@@ -112,7 +119,7 @@
   <!-- /.l_header -->
 
   <div class="m_kv">
-    <h1 class="m_kv_title">MENU</h1>
+    <h1 class="m_kv_title">NEWS</h1>
     <div class="m_kv_bg-wrapper">
       <img class="m_kv_bg" src="img/top_menu_img01.jpg" alt="" width="556" height="835" />
     </div>
@@ -122,143 +129,200 @@
     <section class="news_article">
       <div class="l_contents">
         <div class="l_container-lg">
-          <div class="news_article_wrap">
-            <h2 class="m_section_title">WHAT’S BREWING</h2>
+          <div class="l_two-column__flex">
+            <div class="l_two-column__main ">
+              <h2 class="m_section_title">WHAT’S BREWING</h2>
+              <div class="m_article_list">
+                <article class="news_article_item-card">
+                  <a href="news-single.html" class="news_article_link">
+                    <div class="news_article_post">
+                      <img src="./img/news_article01.jpg" alt="店内に男の人が立ってる写真" class="news_article_item-img" />
+                      <div class="news_article_dec">
+                        <div class="news_meta">
+                          <time class="news_meta_date">2025.04.20</time>
+                          <span class="top_news_category">NEWS</span>
+                        </div>
+                        <h3 class="news_item_ttl">
+                          新店舗オープンのお知らせ
+                        </h3>
+                        <p class="online_products_item-des news_item_des">
+                          いつも「雫 -shizuku coffee drip-」をご愛顧いただき…
+                        </p>
+                        <div class="m_link-wrap news_link_wrap">
+                          <a href="about-story.html" class="m_link-box__kasou">
+                            <p class="m_link-txt__kasou">
+                              read more
+                              <span class="m_section_link-arrow__kasou"></span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </article>
 
-            <div class="online_products_list">
-              <article class="online_products_item-card">
-                <a href="news-single.html" class="news_article_link">
-                  <img src="./img/news_article01.jpg" alt="店内に男の人が立ってる写真" class="news_article_item-img" />
-                  <div class="news_meta">
-                    <time class="news_meta_date">2025.04.20</time>
-                    <span class="top_news_category">NEWS</span>
+                <article class="news_article_item-card">
+                  <a href="news-single.html" class="news_article_link">
+                    <div class="news_article_post">
+                      <img src="./img/news_article02.jpg" alt="コーヒーを淹れてる淹れてる写真" class="news_article_item-img" />
+                      <div class="news_article_dec">
+                        <div class="news_meta">
+                          <time class="news_meta_date">2025.04.12</time>
+                          <span class="top_news_category">EVENT</span>
+                        </div>
+                        <h3 class="news_item_ttl">
+                          ハンドドリップ体験イベント開催
+                        </h3>
+                        <p class="online_products_item-des">
+                          コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただき…
+                        </p>
+                        <div class="m_link-wrap">
+                          <a href="about-story.html" class="m_link-box__kasou">
+                            <p class="m_link-txt__kasou">
+                              read more
+                              <span class="m_section_link-arrow__kasou"></span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="news_article_item-card">
+                  <div class="news_article_post">
+                    <a href="news-single.html" class="news_article_link">
+                      <img src="./img/news_article03.jpg" alt="葉っぱとコーヒーの写真" class="news_article_item-img" />
+                      <div class="news_article_dec">
+                        <div class="news_meta">
+                          <time class="news_meta_date">2025.04.01</time>
+                          <span class="top_news_category">BEANS</span>
+                        </div>
+                        <h3 class="news_item_ttl">
+                          【数量限定】春のシングルオリジン
+                        </h3>
+                        <p class="online_products_item-des">
+                          春の訪れとともに、数量限定で「春のシングルオリジン豆」をご用意いた…
+                        </p>
+                        <div class="m_link-wrap">
+                          <a href="about-story.html" class="m_link-box__kasou">
+                            <p class="m_link-txt__kasou">
+                              read more
+                              <span class="m_section_link-arrow__kasou"></span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
                   </div>
-                  <h3 class="news_item_ttl">
-                    新店舗オープンのお知らせ
-                  </h3>
-                  <p class="online_products_item-des">
-                    いつも「雫 -shizuku coffee drip-」をご愛顧いただき…
-                  </p>
-                  <p class="m_link-txt">read more
-                  </p>
-                </a>
-              </article>
+                  </a>
+                </article>
 
-              <article class="online_products_item-card">
-                <a href="news-single.html" class="news_article_link">
-                  <img src="./img/news_article02.jpg" alt="コーヒーを淹れてる淹れてる写真" class="news_article_item-img" />
-                  <div class="news_meta">
-                    <time class="news_meta_date">2025.04.12</time>
-                    <span class="top_news_category">EVENT</span>
-                  </div>
-                  <h3 class="news_item_ttl">
-                    ハンドドリップ体験イベント開催
-                  </h3>
-                  <p class="online_products_item-des">
-                    コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただき…
-                  </p>
-                  <p class="m_link-txt">read more
-                  </p>
-                </a>
-              </article>
+                <article class="news_article_item-card">
+                  <a href="news-single.html" class="news_article_link">
+                    <div class="news_article_post">
+                      <img src="./img/news_article01.jpg" alt="店内に男の人が立ってる写真" class="news_article_item-img" />
+                      <div class="news_article_dec">
+                        <div class="news_meta">
+                          <time class="news_meta_date">2025.04.20</time>
+                          <span class="top_news_category">NEWS</span>
+                        </div>
+                        <h3 class="news_item_ttl">
+                          新店舗オープンのお知らせ
+                        </h3>
+                        <p class="online_products_item-des">
+                          いつも「雫 -shizuku coffee drip-」をご愛顧いただき…
+                        </p>
+                        <div class="m_link-wrap">
+                          <a href="about-story.html" class="m_link-box__kasou">
+                            <p class="m_link-txt__kasou">
+                              read more
+                              <span class="m_section_link-arrow__kasou"></span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </article>
 
-              <article class="online_products_item-card">
-                <a href="news-single.html" class="news_article_link">
-                  <img src="./img/news_article03.jpg" alt="葉っぱとコーヒーの写真" class="news_article_item-img" />
-                  <div class="news_meta">
-                    <time class="news_meta_date">2025.04.01</time>
-                    <span class="top_news_category">BEANS</span>
-                  </div>
-                  <h3 class="news_item_ttl">
-                    【数量限定】春のシングルオリジン
-                  </h3>
-                  <p class="online_products_item-des">
-                    春の訪れとともに、数量限定で「春のシングルオリジン豆」をご用意いた…
-                  </p>
-                  <p class="m_link-txt">read more
-                  </p>
-                </a>
-              </article>
+                <article class="news_article_item-card">
+                  <a href="news-single.html" class="news_article_link">
+                    <div class="news_article_post">
+                      <img src="./img/news_article02.jpg" alt="コーヒーを淹れてる淹れてる写真" class="news_article_item-img" />
+                      <div class="news_article_dec">
+                        <div class="news_meta">
+                          <time class="news_meta_date">2025.04.12</time>
+                          <span class="top_news_category">EVENT</span>
+                        </div>
+                        <h3 class="news_item_ttl">
+                          ハンドドリップ体験イベント開催
+                        </h3>
+                        <p class="online_products_item-des">
+                          コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただき…
+                        </p>
+                        <div class="m_link-wrap">
+                          <a href="about-story.html" class="m_link-box__kasou">
+                            <p class="m_link-txt__kasou">
+                              read more
+                              <span class="m_section_link-arrow__kasou"></span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </article>
 
-              <article class="online_products_item-card">
-                <a href="news-single.html" class="news_article_link">
-                  <img src="./img/news_article01.jpg" alt="店内に男の人が立ってる写真" class="news_article_item-img" />
-                  <div class="news_meta">
-                    <time class="news_meta_date">2025.04.20</time>
-                    <span class="top_news_category">NEWS</span>
-                  </div>
-                  <h3 class="news_item_ttl">
-                    新店舗オープンのお知らせ
-                  </h3>
-                  <p class="online_products_item-des">
-                    いつも「雫 -shizuku coffee drip-」をご愛顧いただき…
-                  </p>
-                  <p class="m_link-txt">read more
-                  </p>
-                </a>
-              </article>
-
-              <article class="online_products_item-card">
-                <a href="news-single.html" class="news_article_link">
-                  <img src="./img/news_article02.jpg" alt="コーヒーを淹れてる淹れてる写真" class="news_article_item-img" />
-                  <div class="news_meta">
-                    <time class="news_meta_date">2025.04.12</time>
-                    <span class="top_news_category">EVENT</span>
-                  </div>
-                  <h3 class="news_item_ttl">
-                    ハンドドリップ体験イベント開催
-                  </h3>
-                  <p class="online_products_item-des">
-                    コーヒーを「飲む」だけでなく、「淹れる」ことを体験していただき…
-                  </p>
-                  <p class="m_link-txt">read more
-                  </p>
-                </a>
-              </article>
-
-              <article class="online_products_item-card">
-                <a href="news-single.html" class="news_article_link">
-                  <img src="./img/news_article03.jpg" alt="葉っぱとコーヒーの写真" class="news_article_item-img" />
-                  <div class="news_meta">
-                    <time class="news_meta_date">2025.04.01</time>
-                    <span class="top_news_category">BEANS</span>
-                  </div>
-                  <h3 class="news_item_ttl">
-                    【数量限定】春のシングルオリジン
-                  </h3>
-                  <p class="online_products_item-des">
-                    春の訪れとともに、数量限定で「春のシングルオリジン豆」をご用意いた…
-                  </p>
-                  <p class="m_link-txt">read more
-                  </p>
-                </a>
-              </article>
-
-            <!-- pagination -->
-            <div class="m_pagination">
-              <a href="" class="m_pagination_numbers m_pagination_numbers__before"></a>
-              <span class="m_pagination_numbers m_pagination_numbers__current">1</span>
-              <a href="" class="m_pagination_numbers">2</a>
-              <span class="m_pagination_numbers m_pagination_numbers__between">…</span>
-              <a href="" class="m_pagination_numbers">10</a>
-              <a href="" class="m_pagination_numbers m_pagination_numbers__next"></a>
+                <article class="news_article_item-card">
+                  <a href="news-single.html" class="news_article_link">
+                    <div class="news_article_post">
+                      <img src="./img/news_article03.jpg" alt="葉っぱとコーヒーの写真" class="news_article_item-img" />
+                      <div class="news_article_dec">
+                        <div class="news_meta">
+                          <time class="news_meta_date">2025.04.01</time>
+                          <span class="top_news_category">BEANS</span>
+                        </div>
+                        <h3 class="news_item_ttl">
+                          【数量限定】春のシングルオリジン
+                        </h3>
+                        <p class="online_products_item-des">
+                          春の訪れとともに、数量限定で「春のシングルオリジン豆」をご用意いた…
+                        </p>
+                        <div class="m_link-wrap">
+                          <a href="about-story.html" class="m_link-box__kasou">
+                            <p class="m_link-txt__kasou">
+                              read more
+                              <span class="m_section_link-arrow__kasou"></span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
             </div>
-            <!-- /pagination -->
           </div>
+          <!-- /.l_two-column__flex -->
 
-
-
-            <!-- m_aside category -->
-            <aside class="m_category-menu">
-              <h2 class="m_category-menu_ttl">カテゴリから探す</h2>
-              <ul class="m_category-menu_list">
-                <li><a href="" class="m_category-menu_item">NEWS</a></li>
-                <li><a href="" class="m_category-menu_item">EVENT</a></li>
-                <li><a href="" class="m_category-menu_item">BEANS</a></li>
-              </ul>
-            </aside>
-            <!-- /m_aside -->
+          <div class="m_pagination">
+            <a href="" class="m_pagination_numbers m_pagination_numbers__before"></a>
+            <span class="m_pagination_numbers m_pagination_numbers__current">1</span>
+            <a href="" class="m_pagination_numbers">2</a>
+            <span class="m_pagination_numbers m_pagination_numbers__between">…</span>
+            <a href="" class="m_pagination_numbers">10</a>
+            <a href="" class="m_pagination_numbers m_pagination_numbers__next"></a>
           </div>
+          <!-- /pagination -->
+
+          <aside class="l_two-column__aside">
+            <h2 class="m_category-menu_ttl">カテゴリから探す</h2>
+            <ul class="m_category-menu_list">
+              <li><a href="" class="m_category-menu_item">ALL</a></li>
+              <li><a href="" class="m_category-menu_item">COFFEE</a></li>
+              <li><a href="" class="m_category-menu_item">ITEM</a></li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
