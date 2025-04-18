@@ -1829,6 +1829,7 @@ body.is-light .m_hamburger-bar {
 .contact_form_label {
   margin-left: 8px;
 }
+
 @media screen and (min-width: 1080px) {
   .contact_form_label {
     justify-content: space-between;
