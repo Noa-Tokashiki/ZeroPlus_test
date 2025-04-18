@@ -862,6 +862,55 @@ body.is-light .m_hamburger-bar {
   }
 }
 
+/* meta */
+.m_meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1080px) {
+  .m_meta {
+    justify-content: initial;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .m_meta__news {
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+}
+
+.m_meta_date {
+  border-spacing: 0.1em;
+  font-size: 12px;
+}
+@media screen and (min-width: 1080px) {
+  .m_meta_date {
+    font-size: 14px;
+  }
+}
+
+.m_meta_cat {
+  font-size: 10px;
+  font-weight: bold;
+  width: 89px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  border-radius: 6px;
+}
+@media screen and (min-width: 1080px) {
+  .m_meta_cat {
+    width: 93px;
+    height: 22px;
+    font-size: 12px;
+  }
+}
+
 /*--------------- main --------------*/
 /*----------- top --------*/
 .top_section_title {
@@ -1192,48 +1241,6 @@ body.is-light .m_hamburger-bar {
 
 .top_news_link:hover .top_news_item {
   background-color: var(--gray-color01);
-}
-
-.top_news_item-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-@media screen and (min-width: 1080px) {
-  .top_news_item-wrapper {
-    justify-content: initial;
-    gap: 16px;
-  }
-}
-
-.top_news_time {
-  border-spacing: 0.1em;
-  font-size: 12px;
-}
-@media screen and (min-width: 1080px) {
-  .top_news_time {
-    font-size: 14px;
-  }
-}
-
-.top_news_category {
-  font-size: 10px;
-  font-weight: bold;
-  width: 89px;
-  height: 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--accent-color);
-  color: var(--white-color);
-  border-radius: 6px;
-}
-@media screen and (min-width: 1080px) {
-  .top_news_category {
-    width: 93px;
-    height: 22px;
-    font-size: 12px;
-  }
 }
 
 .top_news_txt {
@@ -1919,11 +1926,11 @@ body.is-light .m_hamburger-bar {
   }
 }
 
-.news_meta {
+/* .news_meta {
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .news_item_ttl {
   margin-top: 12px;
