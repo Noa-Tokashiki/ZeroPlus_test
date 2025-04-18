@@ -1935,14 +1935,59 @@ body.is-light .m_hamburger-bar {
   transform: translate();
 }
 
-.news-single_other_page,.news-single_other_next {
+.news-single_arrow_page {
   display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
   padding-top: 152px;
-  width: 32px;
-  height: 24px;
 }
 
+.news-single_arrow_next {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 152px;
 
+}
+
+.news-single_other_other {
+  display: flex;
+}
+
+.news-single_other_content {
+  width: 280px;
+  height: 351px;
+  margin-top: 24px;
+}
+
+.news-single_other_img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.news-single_other_meta {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-single_other_date {
+  font-size: 12px;
+}
+
+.news-single_other_cat {
+  font-size: 10px;
+  width: 89px;
+  background: var(--accent-color);
+  color: var(--white-color);
+  text-align: center;
+  border-radius: 6px;
+}
+
+.news-single_other_text {
+  margin-top: 8px;
+}
 
 /* ----------------- online_shop ------------- */
 
