@@ -717,6 +717,7 @@ body.is-light .m_hamburger-bar {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  letter-spacing: 0.1em;
 }
 @media screen and (min-width: 1080px) {
   .m_section_title {
@@ -725,9 +726,6 @@ body.is-light .m_hamburger-bar {
 }
 .m_section_title__light {
   color: var(--white-color);
-}
-.m_section_title__kasou {
-  letter-spacing: 0.1em;
 }
 
 /* ---- m_btn ---- */
@@ -1377,6 +1375,7 @@ body.is-light .m_hamburger-bar {
 .about_bg_txt {
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
   color: var(--white-color);
   line-height: 2;
 }
@@ -1527,13 +1526,9 @@ body.is-light .m_hamburger-bar {
     text-align: center;
   }
   .about-story-img {
-    width: calc(100% - 240px);
     height: 463px;
     object-fit: cover;
   }
-  /* .about_story-content {
-    padding: 0 120px;
-  } */
   .about_story-content__kasou {
     padding: 18px 0 0 120px;
   }
