@@ -2037,9 +2037,9 @@ body.is-light .m_hamburger-bar {
   width: 100%;
 }
 
-/* -------------------------------------ホバー淹れるよ！！ */
 .contact_faq_button:hover {
-  box-shadow: 10px;
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
 
 .contact_faq_button:first-child {
@@ -2260,8 +2260,6 @@ body.is-light .m_hamburger-bar {
 }
 
 .contact_form_detail {
-  border: 1px solid var(--white-color);
-  border-radius: 10px;
   height: 40px;
   margin-top: 8px;
 }
@@ -2278,10 +2276,18 @@ body.is-light .m_hamburger-bar {
 .contact_form_detail__content {
   height: 142px;
 }
+
 .contact_form_input {
   width: 100%;
   height: 100%;
   padding-left: 10px;
+  border: 1px solid var(--white-color);
+  border-radius: 10px;
+}
+
+.contact_form_input:focus {
+  outline: none;
+  border: 3px solid var(--accent-color);
 }
 
 .contact_form_radio-list {
