@@ -2034,6 +2034,12 @@ body.is-light .m_hamburger-bar {
 .contact_faq_button {
   background-color: var(--gray-color);
   border-radius: 20px;
+  width: 100%;
+}
+
+/* -------------------------------------ホバー淹れるよ！！ */
+.contact_faq_button:hover {
+  box-shadow: 10px;
 }
 
 .contact_faq_button:first-child {
