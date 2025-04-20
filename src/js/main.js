@@ -226,5 +226,18 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
 // kouki js
 
 // hiroki js
+const images = document.querySelectorAll('.locations_desc_img');
 
+images.forEach((img) => {
+  const originalSrc = img.src;
+  const hoverSrc = img.dataset.hover;
+
+  img.addEventListener('mouseenter', () => {
+    img.src = hoverSrc;
+  });
+
+  img.addEventListener('mouseleave', () => {
+    img.src = originalSrc;
+  });
+});
 // saaya js

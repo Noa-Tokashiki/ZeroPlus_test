@@ -2948,3 +2948,10 @@ body.is-light .m_hamburger-bar {
   pointer-events: none;
   /* クリックできないようにする */
 }
+
+/* hiroki */
+.locations_desc_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
