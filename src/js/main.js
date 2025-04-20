@@ -228,3 +228,10 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
 // hiroki js
 
 // saaya js
+
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     document.querySelector(".opening").style.display = "none";
+//     document.querySelector(".main-content").style.display = "block";
+//   }, 4000); // アニメーション終了後に非表示
+// });
