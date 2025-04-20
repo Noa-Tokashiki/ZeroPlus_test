@@ -191,3 +191,23 @@ const openingAnim = function (content) {
     }
   );
 };
+
+// news-single
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".js_single-swiper", {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1080: {
+        slidesPerView: 3,
+      },
+    },
+  });
+});
