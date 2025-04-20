@@ -182,7 +182,6 @@ body {
 
 .l_header-nav_inner {
   height: 100%;
-  /* position: relative; */
   background-image: url("../img/nav-logo.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,9 +192,6 @@ body {
 }
 
 .l_header-nav_list {
-  /* position: absolute;
-  top: 10%;
-  left: 15%; */
   display: flex;
   flex-direction: column;
   gap: 38px;
@@ -217,12 +213,8 @@ body {
 }
 
 .l_header-nav_msg {
-  /* position: absolute; */
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  /* top: 10%;
-  left: 90%;
-  transform: translateX(-20%); */
   color: var(--white-color);
   font-size: 16px;
   font-weight: bold;
@@ -244,18 +236,11 @@ body {
 }
 
 .l_header-nav_logo {
-  /* position: absolute;
-  top: 50%;
-  left: 80%; */
   width: 50px;
   height: 55px;
 }
 
 .l_header-nav_insta {
-  /* position: absolute;
-  top: 60%;
-  left: 85%;
-  transform: translateX(-25%); */
   width: 35px;
   height: 35px;
 }
@@ -1002,7 +987,6 @@ body.is-light .m_hamburger-bar {
   background-color: var(--black-color);
   display: block;
 }
-
 /* -------- top_kv --------- */
 .top_kv {
   height: 100vh;
@@ -1028,7 +1012,6 @@ body.is-light .m_hamburger-bar {
 .top_kv_title {
   color: var(--white-color);
   font-size: 64px;
-  /* font-weight: bold; */
   text-align: center;
 }
 
@@ -1418,6 +1401,19 @@ body.is-light .m_hamburger-bar {
   background-color: var(--white-color);
 }
 
+.top_shop_link .top_section_title:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+.top_shop_link .top_section_title:hover .top_section_title-arrow {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+.top_shop_link .top_section_title:hover .top_section_title-arrow::before {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+
 .top_shop_logo-wrapper {
   width: 70px;
   height: 63px;
@@ -1427,6 +1423,11 @@ body.is-light .m_hamburger-bar {
 .top_shop_logo-img {
   width: 100%;
   height: 100%;
+}
+
+.top_shop_link .top_shop_logo-wrapper:hover .top_shop_logo-img {
+  filter: drop-shadow(0 0 6px rgba(180, 173, 108, 1));
+  transition: filter 0.3s ease;
 }
 
 .image_scroller {
