@@ -252,10 +252,36 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
 // hiroki js
 
 // saaya js
+const mySwiper = new Swiper(".myswiperTumbler", {
+  loop: false,
+  speed: 400,
+});
 
-// window.addEventListener("load", () => {
-//   setTimeout(() => {
-//     document.querySelector(".opening").style.display = "none";
-//     document.querySelector(".main-content").style.display = "block";
-//   }, 4000); // アニメーション終了後に非表示
-// });
+document.querySelectorAll(".color-btn_tumbler").forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    document.querySelectorAll(".color-btn_tumbler").forEach((button) => {
+      button.classList.remove("is-active");
+    });
+
+    btn.classList.add("is-active");
+    const index = parseInt(btn.dataset.index);
+    mySwiper.slideTo(index);
+  });
+});
+
+const mySwiper2 = new Swiper(".myswiperBag", {
+  loop: false,
+  speed: 400,
+});
+
+document.querySelectorAll(".color-btn_bag").forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    document.querySelectorAll(".color-btn_bag").forEach((button) => {
+      button.classList.remove("is-active");
+    });
+
+    btn.classList.add("is-active");
+    const index = parseInt(btn.dataset.index);
+    mySwiper2.slideTo(index);
+  });
+});

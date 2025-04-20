@@ -1377,6 +1377,11 @@ body.is-light .m_hamburger-bar {
   }
 }
 
+.top_shop_link:hover .top_section_title {
+  color: var(--accent-color);
+  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+
 .top_shop_box {
   padding-top: 55px;
 }
@@ -1400,6 +1405,11 @@ body.is-light .m_hamburger-bar {
   width: clamp(225px, calc(225px + (75 * ((100vw - 768px) / 312))), 325px);
 }
 
+.top_shop_link:hover .top_section_title-arrow {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+
 .top_shop .top_section_title-arrow::before {
   content: "";
   position: absolute;
@@ -1413,15 +1423,7 @@ body.is-light .m_hamburger-bar {
   background-color: var(--white-color);
 }
 
-.top_shop_link .top_section_title:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
-}
-.top_shop_link .top_section_title:hover .top_section_title-arrow {
-  background-color: var(--accent-color);
-  box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
-}
-.top_shop_link .top_section_title:hover .top_section_title-arrow::before {
+.top_shop_link:hover .top_section_title-arrow::before {
   background-color: var(--accent-color);
   box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
@@ -1437,9 +1439,10 @@ body.is-light .m_hamburger-bar {
   height: 100%;
 }
 
-.top_shop_link .top_shop_logo-wrapper:hover .top_shop_logo-img {
-  filter: drop-shadow(0 0 6px rgba(180, 173, 108, 1));
-  transition: filter 0.3s ease;
+.top_shop_link:hover .top_shop_logo-img {
+  filter: drop-shadow(0 0 12px rgba(180, 173, 108, 1))
+    drop-shadow(0 0 24px rgba(180, 173, 108, 1));
+  transition: all 0.1s ease;
 }
 
 .image_scroller {
@@ -2095,7 +2098,7 @@ body.is-light .m_hamburger-bar {
 @media screen and (min-width: 1080px) {
   .locations_desc {
     display: flex;
-    gap: 120px;
+    gap: 96px;
     align-items: center;
   }
 }
@@ -2106,11 +2109,59 @@ body.is-light .m_hamburger-bar {
   margin-top: 48px;
 }
 
+.locations_desc_img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 570 / 320; /* ← 高さの比率に応じて調整可 */
+  overflow: hidden;
+}
 @media screen and (min-width: 1080px) {
   .locations_desc_img-wrapper {
+    max-width: 570px;
+  }
+}
+
+.locations_desc_img-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.locations_desc_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+  display: block;
+  background-color: transparent; /* 念のため */
+}
+
+@media screen and (min-width: 1080px) {
+  .locations_desc_img {
     width: 570px;
     object-fit: cover;
   }
+}
+
+/* .base-img {
+  z-index: 1;
+  opacity: 1;
+} */
+
+.hover-img {
+  z-index: 2;
+  opacity: 0;
+}
+
+/* .locations_desc_img-wrapper:hover .base-img {
+  opacity: 0;
+} */
+
+.locations_desc_img-wrapper:hover .hover-img {
+  opacity: 1;
 }
 
 .locations_desc_title {
@@ -2125,7 +2176,12 @@ body.is-light .m_hamburger-bar {
 }
 .locations_table {
   margin-top: 16px;
-  width: 375px;
+  width: 343px;
+}
+@media screen and (min-width: 1080px) {
+  .locations_table {
+    width: 100%;
+  }
 }
 .locations_th {
   font-weight: bold;
@@ -2512,6 +2568,33 @@ body.is-light .m_hamburger-bar {
   }
 }
 
+/* ---- onlineshop-js ---- */
+.swiper-slide {
+  width: 100%;
+}
+
+.color-selector {
+  margin: 8px 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 27px;
+}
+
+.color-btn_tumbler,
+.color-btn_bag {
+  all: unset; /* これでデフォルトのbuttonスタイルを全部消す */
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--auxiliary-color);
+  border-radius: 50%;
+}
+
+.color-btn_tumbler.is-active,
+.color-btn_bag.is-active {
+  transform: scale(1.2);
+}
+
 /* ------------------ contact ----------------- */
 
 .contact_faq {
@@ -2709,7 +2792,7 @@ body.is-light .m_hamburger-bar {
   .contact_form_heading {
     margin-top: 0;
     width: calc(30% - 16px);
-    align-items: flex-start;
+    height: 40px;
   }
 }
 
@@ -2759,7 +2842,7 @@ body.is-light .m_hamburger-bar {
     position: absolute;
     left: 32%;
     top: 0;
-    transform: translateY(-60%);
+    transform: translateY(-100%);
   }
 }
 
@@ -2771,11 +2854,19 @@ body.is-light .m_hamburger-bar {
 @media screen and (min-width: 1080px) {
   .contact_form_detail {
     width: 70%;
+    margin-top: 0;
   }
 }
 
 .contact_form_detail__radio {
   border: none;
+}
+
+@media screen and (min-width: 1080px) {
+  .contact_form_detail__radio {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact_form_detail__content {
