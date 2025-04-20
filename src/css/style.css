@@ -2098,7 +2098,7 @@ body.is-light .m_hamburger-bar {
 @media screen and (min-width: 1080px) {
   .locations_desc {
     display: flex;
-    gap: 120px;
+    gap: 96px;
     align-items: center;
   }
 }
@@ -2110,9 +2110,8 @@ body.is-light .m_hamburger-bar {
 }
 
 @media screen and (min-width: 1080px) {
-  .locations_desc_img-wrapper {
+  .locations_desc_img {
     width: 570px;
-    height: 320px;
     object-fit: cover;
   }
 }
@@ -2129,6 +2128,12 @@ body.is-light .m_hamburger-bar {
 }
 .locations_table {
   margin-top: 16px;
+  width: 343px;
+}
+@media screen and (min-width: 1080px) {
+  .locations_table {
+    width: 100%;
+  }
 }
 .locations_th {
   font-weight: bold;
