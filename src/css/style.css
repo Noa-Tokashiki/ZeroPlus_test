@@ -2107,7 +2107,7 @@ body.is-light .m_hamburger-bar {
 }
 
 @media screen and (min-width: 1080px) {
-  .locations_desc_img-wrapper {
+  .locations_desc_img {
     width: 570px;
     object-fit: cover;
   }
