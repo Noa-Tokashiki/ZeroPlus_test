@@ -1,5 +1,29 @@
 "use strict";
 
+window.addEventListener("load", () => {
+  const opening = document.querySelector(".opening");
+  const openingVideo = document.querySelector(".opening_video");
+  const overlay = document.querySelector(".opening_overlay");
+  const mainKV = document.querySelector(".js_kv");
+
+  // Step 1: ブラーを徐々に解除
+  setTimeout(() => {
+    openingVideo.style.filter = "blur(0px)";
+    overlay.style.opacity = 0;
+  }, 500);
+
+  // Step 2: オープニングをフェードアウト
+  setTimeout(() => {
+    opening.style.opacity = 0;
+    mainKV.style.opacity = 1;
+  }, 3500); // フェードの少し前に準備
+
+  // Step 3: 完全に非表示に
+  setTimeout(() => {
+    opening.style.display = "none";
+  }, 4500);
+});
+
 const hamburger = document.querySelector(".js_hamburger");
 const navigation = document.querySelector(".js_navigation");
 const body = document.querySelector(".js_body");
