@@ -211,3 +211,20 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+// noa js
+const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  effect: "fade", // フェード切り替え（オプション）
+  speed: 800,
+});
+
+// kouki js
+
+// hiroki js
+
+// saaya js
