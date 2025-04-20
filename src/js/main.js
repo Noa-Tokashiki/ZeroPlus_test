@@ -230,8 +230,7 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
 // saaya js
 const mySwiper = new Swiper(".myswiperTumbler",{
   loop: false,
-  speed: 0,
-  // speed: 0, 即座に切り替えたいかどうか。スライドのままでいいなら消す。
+  speed: 400,
 });
 
 document.querySelectorAll(".color-btn_tumbler").forEach(btn =>{
@@ -249,7 +248,7 @@ document.querySelectorAll(".color-btn_tumbler").forEach(btn =>{
 
 const mySwiper2 = new Swiper(".myswiperBag",{
   loop: false,
-  speed: 500,
+  speed: 400,
 });
 
 document.querySelectorAll(".color-btn_bag").forEach(btn =>{
