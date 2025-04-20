@@ -2543,6 +2543,34 @@ body.is-light .m_hamburger-bar {
   }
 }
 
+/* ---- onlineshop-js ---- */
+.swiper-slide{
+  width: 100%;
+}
+
+.color-selector{
+  margin: 8px 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 27px;
+}
+
+.color-btn_tumbler,
+.color-btn_bag{
+  all: unset; /* これでデフォルトのbuttonスタイルを全部消す */
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--auxiliary-color);
+  border-radius: 50%;
+}
+
+.color-btn_tumbler.is-active,
+.color-btn_bag.is-active{
+  transform: scale(1.2);
+}
+
+
 /* ------------------ contact ----------------- */
 
 .contact_faq {

@@ -231,11 +231,30 @@
                   </article>
 
                   <article class="online_products_item-card">
-                    <img
+                   <!-- スライダーのメインコンテナ要素（必須） -->
+                      <div class="swiper myswiperTumbler">
+                   <!-- スライドを囲む要素（必須） -->
+                       <div class="swiper-wrapper">
+                   <!-- スライド要素（必須） -->
+                       <div class="swiper-slide"><img src="./img/shop_img03.jpg" alt="グリーンのタンブラー" /></div>
+                       <div class="swiper-slide"><img src="./img/shop_img02.jpg" alt="ホワイトのタンブラー" /></div>
+                       <div class="swiper-slide"><img src="./img/shop_img01.jpg" alt="ブラックのタンブラー" /></div>
+                      </div>
+                   
+                    <!-- カラーの選択ボタン -->
+                      <div class="color-selector">
+                        <button class="color-btn_tumbler" data-index="0" style="background: #6A6648;"></button>
+                        <button class="color-btn_tumbler" data-index="1" style="background: white;"></button>
+                        <button class="color-btn_tumbler" data-index="2" style="background: black;"></button>                      
+                      </div>
+                      </div>
+
+                    <!-- <img
                       src="./img/shop_img03.jpg"
                       alt="オリジナルタンブラーの写真"
                       class="online_products_item-img"
-                    />
+                    /> -->
+
                     <h3 class="online_products_item-ttl">
                       sizuku オリジナルタンブラー
                     </h3>
@@ -258,11 +277,29 @@
                   </article>
 
                   <article class="online_products_item-card">
-                    <img
+                    <!-- スライダーのメインコンテナ要素（必須） -->
+                      <div class="swiper myswiperBag">
+                        <!-- スライドを囲む要素（必須） -->
+                          <div class="swiper-wrapper">
+                            <!-- スライド要素（必須） -->
+                              <div class="swiper-slide"><img src="./img/shop_img07.jpg" alt="ブラックのトート" /></div>
+                              <div class="swiper-slide"><img src="./img/shop_img08.jpg" alt="ホワイトのトート" /></div>
+                              <div class="swiper-slide"><img src="./img/shop_img09.jpg" alt="グリーンのトート" /></div>
+                          </div>
+                                        
+                    <!-- カラーの選択ボタン -->
+                      <div class="color-selector">
+                        <button class="color-btn_bag" data-index="0" style="background: black;"></button>
+                        <button class="color-btn_bag" data-index="1" style="background: white;"></button>
+                        <button class="color-btn_bag" data-index="2" style="background: #6A6648;"></button>                      
+                      </div>
+                      </div>
+                                          
+                    <!-- <img
                       src="./img/shop_img07.jpg"
                       alt="オリジナルトートバックの写真"
                       class="online_products_item-img"
-                    />
+                    /> -->
                     <h3 class="online_products_item-ttl">
                       sizuku オリジナルトートバッグ
                     </h3>
@@ -502,5 +539,9 @@
       </small>
     </footer>
     <!-- /.l_footer -->
+
+    <!-- Swiper読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   </body>
 </html>
