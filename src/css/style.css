@@ -2179,6 +2179,7 @@ body.is-light .m_hamburger-bar {
 @media screen and (min-width: 768px) {
   .news_article_post {
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -2186,7 +2187,7 @@ body.is-light .m_hamburger-bar {
   height: 300px;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .news_img_box {
     width: 307px;
     height: 207px;
@@ -2206,7 +2207,9 @@ body.is-light .m_hamburger-bar {
 
 .news_article_dec {
   margin-top: 16px;
+  margin-left: 16px;
 }
+
 @media screen and (min-width: 1080px) {
   .news_article_dec {
     margin-top: 0;
