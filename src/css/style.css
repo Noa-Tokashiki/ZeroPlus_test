@@ -1377,6 +1377,11 @@ body.is-light .m_hamburger-bar {
   }
 }
 
+.top_shop_link:hover .top_section_title {
+  color: var(--accent-color);
+  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+
 .top_shop_box {
   padding-top: 55px;
 }
@@ -1400,6 +1405,11 @@ body.is-light .m_hamburger-bar {
   width: clamp(225px, calc(225px + (75 * ((100vw - 768px) / 312))), 325px);
 }
 
+.top_shop_link:hover .top_section_title-arrow {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+
 .top_shop .top_section_title-arrow::before {
   content: "";
   position: absolute;
@@ -1413,15 +1423,7 @@ body.is-light .m_hamburger-bar {
   background-color: var(--white-color);
 }
 
-.top_shop_link .top_section_title:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
-}
-.top_shop_link .top_section_title:hover .top_section_title-arrow {
-  background-color: var(--accent-color);
-  box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
-}
-.top_shop_link .top_section_title:hover .top_section_title-arrow::before {
+.top_shop_link:hover .top_section_title-arrow::before {
   background-color: var(--accent-color);
   box-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
@@ -1437,9 +1439,10 @@ body.is-light .m_hamburger-bar {
   height: 100%;
 }
 
-.top_shop_link .top_shop_logo-wrapper:hover .top_shop_logo-img {
-  filter: drop-shadow(0 0 6px rgba(180, 173, 108, 1));
-  transition: filter 0.3s ease;
+.top_shop_link:hover .top_shop_logo-img {
+  filter: drop-shadow(0 0 12px rgba(180, 173, 108, 1))
+    drop-shadow(0 0 24px rgba(180, 173, 108, 1));
+  transition: all 0.1s ease;
 }
 
 .image_scroller {
