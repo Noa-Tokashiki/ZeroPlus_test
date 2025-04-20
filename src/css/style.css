@@ -2097,7 +2097,7 @@ body.is-light .m_hamburger-bar {
 @media screen and (min-width: 1080px) {
   .locations_desc_img-wrapper {
     width: 570px;
-    height: 320px;
+    /* height: 320px; */
     object-fit: cover;
   }
 }
@@ -2114,6 +2114,7 @@ body.is-light .m_hamburger-bar {
 }
 .locations_table {
   margin-top: 16px;
+  width: 375px;
 }
 .locations_th {
   font-weight: bold;
@@ -2121,13 +2122,13 @@ body.is-light .m_hamburger-bar {
 }
 @media screen and (min-width: 1080px) {
   .locations_th {
-    padding-right: 32px;
+    padding-right: 32px;/*32px*/
     width: 100px;
   }
 }
 @media screen and (min-width: 1080px) {
   .locations_td {
-    width: 200px;
+    width: 180px;
   }
 }
 
