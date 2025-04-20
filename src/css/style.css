@@ -2810,6 +2810,13 @@ body.is-light .m_hamburger-bar {
   border: none;
 }
 
+@media screen and (min-width: 1080px) {
+  .contact_form_detail__radio {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .contact_form_detail__content {
   height: 142px;
 }
