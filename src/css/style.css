@@ -2106,11 +2106,22 @@ body.is-light .m_hamburger-bar {
   margin-top: 48px;
 }
 
+.locations_desc_img-wrapper {
+  width: 343px;
+  height: 320px;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+
 @media screen and (min-width: 1080px) {
   .locations_desc_img-wrapper {
     width: 570px;
     height: 320px;
     object-fit: cover;
+    max-width: 1138px;
+    aspect-ratio: 1138 / 640;
   }
 }
 
@@ -2951,7 +2962,31 @@ body.is-light .m_hamburger-bar {
 
 /* hiroki */
 .locations_desc_img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* 高さ固定 */
   object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+  display: block;
+  background-color: transparent; /* 念のため */
+}
+
+.base-img {
+  z-index: 1;
+  opacity: 1;
+}
+
+.hover-img {
+  z-index: 2;
+  opacity: 0;
+}
+
+.locations_desc_img-wrapper:hover .hover-img {
+  opacity: 1;
+}
+
+.locations_desc_img-wrapper:hover .base-img {
+  opacity: 0;
 }

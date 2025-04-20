@@ -226,18 +226,58 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
 // kouki js
 
 // hiroki js
-const images = document.querySelectorAll('.locations_desc_img');
 
-images.forEach((img) => {
-  const originalSrc = img.src;
-  const hoverSrc = img.dataset.hover;
+// const images = document.querySelectorAll('.locations_desc_img');
 
-  img.addEventListener('mouseenter', () => {
-    img.src = hoverSrc;
-  });
+// images.forEach((img) => {
+//   const originalSrc = img.src;
+//   const hoverSrc = img.dataset.hover;
 
-  img.addEventListener('mouseleave', () => {
-    img.src = originalSrc;
-  });
-});
+//   img.addEventListener('mouseenter', () => {
+//     img.classList.add('fade-out');
+//     setTimeout(() => {
+//       img.src = hoverSrc;
+//       img.classList.remove('fade-out');
+//     }, 400);
+//   });
+
+//   img.addEventListener('mouseleave', () => {
+//     img.classList.add('fade-out');
+//     setTimeout(() => {
+//       img.src = originalSrc;
+//       img.classList.remove('fade-out');
+//     }, 400);
+//   });
+// });
+
+// const images = document.querySelectorAll('.locations_desc_img');
+
+// images.forEach((img) => {
+//   const originalSrc = img.src;
+//   const hoverSrc = img.dataset.hover;
+
+//   let isHovered = false;
+
+//   const fadeOutAndChange = (newSrc) => {
+//     img.style.opacity = '0';
+//     setTimeout(() => {
+//       img.src = newSrc;
+//       img.style.opacity = '1';
+//     }, 400); // 半分で切り替え
+//   };
+
+//   img.addEventListener('mouseenter', () => {
+//     if (!isHovered) {
+//       isHovered = true;
+//       fadeOutAndChange(hoverSrc);
+//     }
+//   });
+
+//   img.addEventListener('mouseleave', () => {
+//     if (isHovered) {
+//       isHovered = false;
+//       fadeOutAndChange(originalSrc);
+//     }
+//   });
+// });
 // saaya js
