@@ -2709,7 +2709,7 @@ body.is-light .m_hamburger-bar {
   .contact_form_heading {
     margin-top: 0;
     width: calc(30% - 16px);
-    align-items: flex-start;
+    height: 40px;
   }
 }
 
@@ -2759,7 +2759,7 @@ body.is-light .m_hamburger-bar {
     position: absolute;
     left: 32%;
     top: 0;
-    transform: translateY(-60%);
+    transform: translateY(-100%);
   }
 }
 
@@ -2771,11 +2771,19 @@ body.is-light .m_hamburger-bar {
 @media screen and (min-width: 1080px) {
   .contact_form_detail {
     width: 70%;
+    margin-top: 0;
   }
 }
 
 .contact_form_detail__radio {
   border: none;
+}
+
+@media screen and (min-width: 1080px) {
+  .contact_form_detail__radio {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact_form_detail__content {
