@@ -1,27 +1,64 @@
 "use strict";
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
+  const blur = document.querySelector(".video-blur");
+  const video = document.querySelector(".bg-video");
   const opening = document.querySelector(".opening");
-  const openingVideo = document.querySelector(".opening_video");
-  const overlay = document.querySelector(".opening_overlay");
-  const mainKV = document.querySelector(".js_kv");
+  const topKv = document.querySelector(".top_kv");
+  const drop = document.getElementById("drop");
 
-  // Step 1: ブラーを徐々に解除
+  // 初期状態：top_kv 非表示
+  topKv.style.opacity = "0";
+
+  // 雫：初期位置を上に
+  gsap.set(drop, {
+    y: -60,
+    opacity: 1,
+  });
+
+  // 雫：落下（1.5秒で落ちる）
+  gsap.to(drop, {
+    y: "48vh",
+    duration: 1.5,
+    ease: "power2.inOut",
+  });
+
+  // 雫：落下と同時に波紋を生成
   setTimeout(() => {
-    openingVideo.style.filter = "blur(0px)";
-    overlay.style.opacity = 0;
-  }, 500);
+    for (let i = 0; i < 3; i++) {
+      const ripple = document.createElement("div");
+      ripple.className = "ripple";
+      if (i === 1) ripple.classList.add("delay1");
+      if (i === 2) ripple.classList.add("delay2");
+      opening.appendChild(ripple);
+    }
+  }, 1000); // 雫が着地するタイミングで波紋
 
-  // Step 2: オープニングをフェードアウト
+  // 雫をフェードアウト
   setTimeout(() => {
-    opening.style.opacity = 0;
-    mainKV.style.opacity = 1;
-  }, 3500); // フェードの少し前に準備
+    drop.style.opacity = "0";
+  }, 700);
 
-  // Step 3: 完全に非表示に
+  // ブラー解除
+  setTimeout(() => {
+    blur.style.backdropFilter = "blur(0px)";
+    video.style.filter = "blur(0px)";
+  }, 2300);
+
+  // KV表示
+  setTimeout(() => {
+    topKv.style.opacity = "1";
+  }, 2000);
+
+  // openingフェードアウト
+  setTimeout(() => {
+    opening.classList.add("fadeout");
+  }, 4000);
+
+  // 完全に非表示
   setTimeout(() => {
     opening.style.display = "none";
-  }, 4500);
+  }, 5000);
 });
 
 const hamburger = document.querySelector(".js_hamburger");

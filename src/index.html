@@ -63,18 +63,23 @@
   </head>
 
   <body class="js_body">
-    <!-- <div class="opening">
-      <div class="opening_bg">
-        <video src="img/top_kv.mp4" autoplay muted loop playsinline></video>
-      </div>
+    <div class="opening">
+      <video
+        src="img/top_kv.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="bg-video"
+      ></video>
+      <div class="video-blur"></div>
 
-      <div class="opening_overlay">
-        <div class="drop-shaped"></div>
-        <div class="ripple"></div>
-        <div class="ripple delay1"></div>
-        <div class="ripple delay2"></div>
+      <!-- 雫と波紋 -->
+      <div class="drop-wrapper">
+        <div class="drop" id="drop"></div>
       </div>
-    </div> -->
+      <!-- 波紋は JavaScript で遅れて追加 -->
+    </div>
 
     <header class="l_header js_header">
       <h1>

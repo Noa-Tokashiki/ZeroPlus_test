@@ -49,6 +49,105 @@ body {
   /* background: var(--gray-color02); */
 }
 
+/* opening */
+
+.opening {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background: #000;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 1.8s ease;
+}
+.opening.fadeout {
+  opacity: 0;
+}
+
+/* Background video & blur */
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px);
+  transition: filter 2s ease;
+}
+.video-blur {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  z-index: 2;
+  pointer-events: none;
+  transition: backdrop-filter 2s ease;
+}
+
+/* Drop (雫) */
+.drop-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Drop (custom droplet shape) */
+.drop {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(180, 200, 255, 0.6)
+  );
+  border-radius: 0% 100% 50% 50% / 0% 50% 50% 100%;
+  transform: rotate(45deg) skew(10deg, 10deg);
+  transition: opacity 0.8s ease;
+}
+
+/* Ripple (波紋) */
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  animation: spread 3s ease-out forwards;
+}
+.ripple.delay1 {
+  animation-delay: 0.2s;
+}
+.ripple.delay2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fall {
+  to {
+    top: 48%;
+    transform: translateX(-50%);
+  }
+}
+@keyframes spread {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 800px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
 /* ---------- utility ---------- */
 
 @media screen and (min-width: 375px) {
