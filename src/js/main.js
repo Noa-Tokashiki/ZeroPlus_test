@@ -223,43 +223,102 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
   speed: 800,
 });
 
-// kouki js
-
-// hiroki js
-
 // saaya js
-const mySwiper = new Swiper(".myswiperTumbler",{
+const mySwiper = new Swiper(".myswiperTumbler", {
   loop: false,
   speed: 400,
 });
 
-document.querySelectorAll(".color-btn_tumbler").forEach(btn =>{
-  btn.addEventListener("mouseenter" , () => {
+document.querySelectorAll(".color-btn_tumbler").forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
     document.querySelectorAll(".color-btn_tumbler").forEach((button) => {
       button.classList.remove("is-active");
     });
-    
+
     btn.classList.add("is-active");
     const index = parseInt(btn.dataset.index);
     mySwiper.slideTo(index);
   });
 });
 
-
-const mySwiper2 = new Swiper(".myswiperBag",{
+const mySwiper2 = new Swiper(".myswiperBag", {
   loop: false,
   speed: 400,
 });
 
-document.querySelectorAll(".color-btn_bag").forEach(btn =>{
-  btn.addEventListener("mouseenter" , () => {
+document.querySelectorAll(".color-btn_bag").forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
     document.querySelectorAll(".color-btn_bag").forEach((button) => {
       button.classList.remove("is-active");
     });
-    
+
     btn.classList.add("is-active");
     const index = parseInt(btn.dataset.index);
     mySwiper2.slideTo(index);
   });
 });
 
+// kvのアニメーション;
+document.addEventListener("DOMContentLoaded", () => {
+  const blurElements = document.querySelectorAll(".blur");
+
+  blurElements.forEach((el, index) => {
+    const delay = 0.3 * index; // 順番に遅延（0.3秒ずつ）
+    el.style.transitionDelay = `${delay}s`;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("isActive");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-20% 0px",
+        threshold: 0,
+      }
+    );
+
+    observer.observe(el);
+  });
+});
+
+// top_about, about仮想ページ
+const setupIntersectionObserver = (target, options) => {
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("isActive");
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(target);
+};
+
+// 発火タイミングをページによって変える関数
+const setupAdvanced = (target) => {
+  const pathname = window.location.pathname;
+
+  const options = {
+    root: null,
+    rootMargin: pathname.includes("about.html")
+      ? "-70% 0px -30%" // ←「aboutページ」だけ早めに発火
+      : "-55% 0px -45%", // ← 他ページのデフォルト
+    threshold: 0,
+  };
+
+  setupIntersectionObserver(target, options);
+};
+
+// DOMが読み込まれたら実行
+document.addEventListener("DOMContentLoaded", () => {
+  const advancedElements = document.querySelectorAll(".advanced");
+  advancedElements.forEach((el) => {
+    setupAdvanced(el); // ページ別設定を使って初期化
+  });
+});
