@@ -36,6 +36,7 @@
 /*-- html --*/
 html {
   background: var(--gray-color02);
+  scrollbar-gutter: stable;
 }
 
 /*-- body --*/
@@ -62,6 +63,7 @@ body {
   pointer-events: none;
   opacity: 1;
   transition: opacity 1.8s ease;
+  overflow: hidden;
 }
 .opening.fadeout {
   opacity: 0;
@@ -73,7 +75,12 @@ body {
   height: 100%;
   object-fit: cover;
   filter: blur(20px);
-  transition: filter 2s ease;
+  transition: filter 3s ease;
+}
+@media screen and (min-width: 1080px) {
+  .bg-video {
+    object-position: right;
+  }
 }
 .video-blur {
   position: absolute;
@@ -96,15 +103,13 @@ body {
 
 /* Drop (custom droplet shape) */
 .drop {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(180, 200, 255, 0.6)
-  );
-  border-radius: 0% 100% 50% 50% / 0% 50% 50% 100%;
-  transform: rotate(45deg) skew(10deg, 10deg);
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2); /* ← 透明感ある白 */
+  backdrop-filter: blur(2px);
+  /* border-radius: 0% 100% 50% 50% / 0% 50% 50% 100%;
+  transform: rotate(45deg) skew(10deg, 10deg); */
+  border-radius: 100vh;
   transition: opacity 0.8s ease;
 }
 
@@ -115,12 +120,16 @@ body {
   left: 50%;
   width: 0px;
   height: 0px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   opacity: 0;
   animation: spread 3s ease-out forwards;
+
+  --ripple-w: 100vw;
+  --ripple-h: 500px;
 }
 .ripple.delay1 {
   animation-delay: 0.2s;
@@ -142,8 +151,8 @@ body {
     opacity: 1;
   }
   100% {
-    width: 800px;
-    height: 300px;
+    width: var(--ripple-w);
+    height: var(--ripple-h);
     opacity: 0;
   }
 }

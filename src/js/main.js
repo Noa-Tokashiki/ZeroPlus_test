@@ -18,32 +18,49 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // 雫：落下（1.5秒で落ちる）
   gsap.to(drop, {
-    y: "48vh",
-    duration: 1.5,
+    y: "50vh",
+    duration: 2,
     ease: "power2.inOut",
   });
 
-  // 雫：落下と同時に波紋を生成
+  // 波紋のサイズ（画面サイズに応じて計算）
+  // 波紋のサイズ（画面サイズに応じて計算）
+  let rippleWidth;
+  let rippleHeight;
+
+  if (window.innerWidth <= 768) {
+    // スマホ：めっちゃ横に広げる
+    rippleWidth = window.innerWidth * 2 + "px"; // ← ← ← 2倍に！
+    rippleHeight = "200px"; // 低めに抑えて横感を強調
+  } else {
+    // PC：普通に広がる
+    rippleWidth = window.innerWidth + "px";
+    rippleHeight = Math.floor(window.innerHeight * 0.4) + "px";
+  }
+
+  // 雫：着地のタイミングで波紋を生成
   setTimeout(() => {
     for (let i = 0; i < 3; i++) {
       const ripple = document.createElement("div");
       ripple.className = "ripple";
+      ripple.style.setProperty("--ripple-w", rippleWidth);
+      ripple.style.setProperty("--ripple-h", rippleHeight);
       if (i === 1) ripple.classList.add("delay1");
       if (i === 2) ripple.classList.add("delay2");
       opening.appendChild(ripple);
     }
-  }, 1000); // 雫が着地するタイミングで波紋
+  }, 1400); // 雫が着地するタイミングで波紋
 
   // 雫をフェードアウト
   setTimeout(() => {
     drop.style.opacity = "0";
-  }, 700);
+  }, 1000);
 
   // ブラー解除
   setTimeout(() => {
     blur.style.backdropFilter = "blur(0px)";
     video.style.filter = "blur(0px)";
-  }, 2300);
+  }, 2800);
 
   // KV表示
   setTimeout(() => {
@@ -53,12 +70,25 @@ window.addEventListener("DOMContentLoaded", () => {
   // openingフェードアウト
   setTimeout(() => {
     opening.classList.add("fadeout");
-  }, 4000);
+  }, 5000);
 
   // 完全に非表示
   setTimeout(() => {
     opening.style.display = "none";
-  }, 5000);
+  }, 5500);
+
+  // ① スクロールロック開始
+  document.body.classList.add("is-active");
+
+  // 既存コードはそのまま
+
+  // opening 完全非表示
+  setTimeout(() => {
+    opening.style.display = "none";
+
+    // ② スクロールロック解除
+    document.body.classList.remove("is-active");
+  }, 5500);
 });
 
 const hamburger = document.querySelector(".js_hamburger");
