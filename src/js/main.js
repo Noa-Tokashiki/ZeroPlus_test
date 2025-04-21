@@ -300,15 +300,26 @@ const setupIntersectionObserver = (target, options) => {
   observer.observe(target);
 };
 
-// 発火タイミングをページによって変える関数
 const setupAdvanced = (target) => {
   const pathname = window.location.pathname;
 
+  let rootMargin;
+
+  if (pathname.includes("about.html")) {
+    rootMargin = "-70% 0px -30%"; // about.html の発火タイミング
+  } else if (pathname.includes("about-story__columbia.html")) {
+    rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
+  } else if (pathname.includes("about-story__ethiopia.html")) {
+    rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
+  } else if (pathname.includes("about-story__honduras.html")) {
+    rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
+  } else {
+    rootMargin = "-55% 0px -45%"; // 他のページ用（デフォルト）
+  }
+
   const options = {
     root: null,
-    rootMargin: pathname.includes("about.html")
-      ? "-70% 0px -30%" // ←「aboutページ」だけ早めに発火
-      : "-55% 0px -45%", // ← 他ページのデフォルト
+    rootMargin: rootMargin,
     threshold: 0,
   };
 
