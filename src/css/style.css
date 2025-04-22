@@ -58,8 +58,8 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 999;
-  background: #000;
+  z-index: var(--z-index-modal);
+  background: var(--black-color);
   pointer-events: none;
   opacity: 1;
   transition: opacity 1.8s ease;
@@ -105,10 +105,8 @@ body {
 .drop {
   width: 10px;
   height: 10px;
-  background: rgba(255, 255, 255, 0.2); /* ← 透明感ある白 */
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
-  /* border-radius: 0% 100% 50% 50% / 0% 50% 50% 100%;
-  transform: rotate(45deg) skew(10deg, 10deg); */
   border-radius: 100vh;
   transition: opacity 0.8s ease;
 }
@@ -128,7 +126,7 @@ body {
   opacity: 0;
   animation: spread 3.8s ease-out forwards;
 
-  filter: url(#wavy); /* ←これを追加 */
+  filter: url(#wavy);
 
   --ripple-w: 100vw;
   --ripple-h: 500px;
@@ -336,7 +334,7 @@ body {
   font-size: 24px;
   display: inline-block;
   transform: rotate(90deg);
-  /* ← 雫だけを90度回転 */
+  /* ↑ 雫だけを90度回転 */
   transform-origin: center;
 }
 
@@ -662,7 +660,7 @@ body {
 
 body.is-light .m_hamburger-bar {
   background: var(--white-color);
-  /* ← 白など、切り替えたい色 */
+  /* ↑ 白など、切り替えたい色 */
 }
 
 .m_hamburger-bar-color {
@@ -782,7 +780,7 @@ body.is-light .m_hamburger-bar {
   position: absolute;
   inset: 0;
   /* top: 0; right: 0; bottom: 0; left: 0; と同じ */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(242, 242, 242, 0);
   /* 初期は透明 */
   transition: background-color 0.3s ease;
   z-index: var(--z-index-default);
@@ -790,8 +788,8 @@ body.is-light .m_hamburger-bar {
 }
 
 .m_arrow_link:hover .m_overlay {
-  background-color: rgba(255, 255, 255, 0.3);
-  /* 白の透けレイヤー */
+  background-color: rgba(242, 242, 242, 0.3);
+  /* #f2f2f2の透けレイヤー */
 }
 
 .m_arrow_link:hover .m_arrow-wrapper__kasou {
@@ -936,9 +934,9 @@ body.is-light .m_hamburger-bar {
   background-color: var(--accent-color);
   color: var(--white-color);
   border-radius: 100vh;
+  border: 1px solid transparent;
 
-  transition: opacity 1s ease;
-  /* 画像の切替時の背景色もぬるっと変わるやつ */
+  transition: all 0.2s ease-in-out;
 }
 
 /*  button-hover  */
@@ -946,12 +944,10 @@ body.is-light .m_hamburger-bar {
   background-color: var(--white-color);
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  transition: 0.5s;
 }
 
 .m_btn:hover .online_cart-icon {
   content: url(../img/shop-logo_hover.png);
-  transition: 0.5s;
 }
 
 /* ---- pagination ---- */
@@ -978,6 +974,8 @@ body.is-light .m_hamburger-bar {
   align-items: center;
   justify-content: center;
   background: var(--gray-color);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .m_pagination_numbers__current {
@@ -1020,11 +1018,12 @@ body.is-light .m_hamburger-bar {
 }
 
 /* pagenation hover */
-.m_pagination_numbers:not(.m_pagination_numbers__current):hover {
+.m_pagination_numbers:not(.m_pagination_numbers__current):not(
+    .m_pagination_numbers__between
+  ):hover {
   background-color: var(--white-color);
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  transition: all 0.3s ease;
 }
 
 .m_pagination_numbers__before:hover::before {
@@ -1053,10 +1052,15 @@ body.is-light .m_hamburger-bar {
   height: 30px;
   border-bottom: 1px solid var(--black-color);
   margin-top: 16px;
+  transition: all 0.3s;
 }
 
 .m_category-menu_item::after {
   content: ">";
+}
+.m_category-menu_item:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
 
 /* /------------article------------/ */
@@ -2307,12 +2311,6 @@ body.is-light .m_hamburger-bar {
   }
 }
 
-.locations_desc_img-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
 .locations_desc_img {
   position: absolute;
   top: 0;
@@ -2331,23 +2329,20 @@ body.is-light .m_hamburger-bar {
     object-fit: cover;
   }
 }
-
-.hover-img {
-  z-index: 2;
+.locations_desc_img__hover {
   opacity: 0;
 }
-
-.locations_desc_img-wrapper:hover .hover-img {
+.locations_desc_img-wrapper:hover .locations_desc_img__hover {
   opacity: 1;
 }
 
-.locations_desc_title {
+.locations_table_heading {
   font-size: 24px;
   font-weight: bold;
   margin-top: 16px;
 }
 @media screen and (min-width: 1080px) {
-  .locations_desc_title {
+  .locations_table_heading {
     margin-top: 0;
   }
 }
