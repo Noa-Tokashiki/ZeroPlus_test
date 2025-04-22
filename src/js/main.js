@@ -259,11 +259,41 @@ document.querySelectorAll(".color-btn_bag").forEach((btn) => {
 });
 
 // kvのアニメーション;
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
+//   const blurElements = document.querySelectorAll(".blur");
+
+//   blurElements.forEach((el, index) => {
+//     const delay = 0.3 * index; // 順番に遅延（0.3秒ずつ）
+//     el.style.transitionDelay = `${delay}s`;
+
+//     const observer = new IntersectionObserver(
+//       (entries, observer) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add("isActive");
+//             observer.unobserve(entry.target);
+//           }
+//         });
+//       },
+//       {
+//         root: null,
+//         rootMargin: "-20% 0px",
+//         threshold: 0,
+//       }
+//     );
+
+//     observer.observe(el);
+//   });
+// });
+
+// blur要素のためのIntersectionObserverを準備する（observeは後で）
+let blurObservers = [];
+
+function setupBlurObservers() {
   const blurElements = document.querySelectorAll(".blur");
 
   blurElements.forEach((el, index) => {
-    const delay = 0.3 * index; // 順番に遅延（0.3秒ずつ）
+    const delay = 0.3 * index;
     el.style.transitionDelay = `${delay}s`;
 
     const observer = new IntersectionObserver(
@@ -282,9 +312,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
 
-    observer.observe(el);
+    blurObservers.push({ observer, target: el });
   });
-});
+}
+
+// 最初にsetupだけしておく（observeしない）
+setupBlurObservers();
 
 // top_about, about仮想ページ
 const setupIntersectionObserver = (target, options) => {
@@ -306,7 +339,7 @@ const setupAdvanced = (target) => {
   let rootMargin;
 
   if (pathname.includes("about.html")) {
-    rootMargin = "-70% 0px -30%"; // about.html の発火タイミング
+    rootMargin = "-70% 0px -40%"; // about.html の発火タイミング
   } else if (pathname.includes("about-story__columbia.html")) {
     rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
   } else if (pathname.includes("about-story__ethiopia.html")) {
@@ -331,5 +364,149 @@ document.addEventListener("DOMContentLoaded", () => {
   const advancedElements = document.querySelectorAll(".advanced");
   advancedElements.forEach((el) => {
     setupAdvanced(el); // ページ別設定を使って初期化
+  });
+});
+
+// openingアニメーション
+window.addEventListener("DOMContentLoaded", () => {
+  const blur = document.querySelector(".video-blur");
+  const video = document.querySelector(".bg-video");
+  const opening = document.querySelector(".opening");
+  const topKv = document.querySelector(".top_kv");
+  const drop = document.getElementById("drop");
+
+  const lastVisited = localStorage.getItem("lastVisited");
+  const now = new Date().getTime(); // 現在のタイムスタンプ（ミリ秒）
+  const twentyFourHours = 24 * 60 * 60 * 1000; // 24時間（ミリ秒）
+
+  if (lastVisited && now - parseInt(lastVisited) < twentyFourHours) {
+    // 24時間以内ならアニメーションをスキップ
+    topKv.style.opacity = "1";
+    opening.style.display = "none";
+    document.body.classList.remove("is-active");
+
+    blurObservers.forEach(({ observer, target }) => {
+      observer.observe(target);
+    });
+    return;
+  }
+
+  // 初期状態：top_kv 非表示
+  topKv.style.opacity = "0";
+
+  // 雫：初期位置を上に
+  gsap.set(drop, {
+    y: -60,
+    opacity: 1,
+  });
+
+  // 雫：落下（1.5秒で落ちる）
+  gsap.to(drop, {
+    y: "50vh",
+    duration: 1.8,
+    ease: "power2.inOut",
+  });
+
+  // 波紋サイズ設定（画面幅によって分岐）
+  let rippleWidth = window.innerWidth * 2 + "px";
+  let rippleHeight;
+
+  if (window.innerWidth <= 768) {
+    // スマホ
+    rippleHeight = "200px";
+  } else {
+    // PC
+    rippleHeight = "400px";
+  }
+
+  // 波紋生成（着地タイミング）
+  setTimeout(() => {
+    for (let i = 0; i < 3; i++) {
+      const ripple = document.createElement("div");
+      ripple.className = "ripple";
+      ripple.style.setProperty("--ripple-w", rippleWidth);
+      ripple.style.setProperty("--ripple-h", rippleHeight);
+      if (i === 1) ripple.classList.add("delay1");
+      if (i === 2) ripple.classList.add("delay2");
+      opening.appendChild(ripple);
+    }
+  }, 1400);
+
+  // 雫をフェードアウト
+  setTimeout(() => {
+    drop.style.opacity = "0";
+  }, 1000);
+
+  // ブラー解除
+  setTimeout(() => {
+    blur.style.backdropFilter = "blur(0px)";
+    video.style.filter = "blur(0px)";
+  }, 3400);
+
+  // KV表示
+  setTimeout(() => {
+    topKv.style.opacity = "1";
+  }, 2800);
+
+  // openingフェードアウト
+  setTimeout(() => {
+    opening.classList.add("fadeout");
+  }, 4000);
+
+  // 完全に非表示
+  setTimeout(() => {
+    opening.style.display = "none";
+
+    // スクロールロック解除
+    document.body.classList.remove("is-active");
+
+    // ここで再生タイムスタンプを保存！
+    localStorage.setItem("lastVisited", now);
+
+    // blurをobserve開始
+    blurObservers.forEach(({ observer, target }) => {
+      observer.observe(target);
+    });
+  }, 5000);
+
+  // スクロールロック開始
+  document.body.classList.add("is-active");
+});
+
+// フェードイン（読み込み完了後）
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("is-loaded");
+});
+
+// フェードアウト付きページ遷移
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a[href]");
+
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const href = link.getAttribute("href");
+
+      // 同ページ内リンクや空リンク、外部リンクなどは除外
+      if (
+        !href ||
+        href.startsWith("#") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:") ||
+        link.target === "_blank"
+      ) {
+        return;
+      }
+
+      e.preventDefault();
+
+      // フェードアウト開始
+      document.body.classList.remove("is-loaded");
+      document.body.classList.add("is-transition-active");
+
+      // ページ遷移（CSSとタイミングを揃える）
+      setTimeout(() => {
+        window.location.href = href;
+      }, 100); // transitionと同じ時間
+    });
   });
 });

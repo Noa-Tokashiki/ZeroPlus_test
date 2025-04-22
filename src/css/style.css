@@ -36,6 +36,7 @@
 /*-- html --*/
 html {
   background: var(--gray-color02);
+  scrollbar-gutter: stable;
 }
 
 /*-- body --*/
@@ -46,7 +47,114 @@ body {
   /*メイン*/
   font-size: 16px;
   line-height: 1.5;
-  /* background: var(--gray-color02); */
+}
+
+/* opening */
+
+.opening {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: var(--z-index-modal);
+  background: var(--black-color);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 1.8s ease;
+  overflow: hidden;
+}
+.opening.fadeout {
+  opacity: 0;
+}
+
+/* Background video & blur */
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px);
+  transition: filter 3s ease;
+}
+@media screen and (min-width: 1080px) {
+  .bg-video {
+    object-position: right;
+  }
+}
+.video-blur {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  z-index: 2;
+  pointer-events: none;
+  transition: backdrop-filter 2s ease;
+}
+
+/* Drop (雫) */
+.drop-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Drop (custom droplet shape) */
+.drop {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 100vh;
+  transition: opacity 0.8s ease;
+}
+
+/* Ripple (波紋) */
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  animation: spread 3.8s ease-out forwards;
+
+  filter: url(#wavy);
+
+  --ripple-w: 100vw;
+  --ripple-h: 500px;
+}
+.ripple.delay1 {
+  animation-delay: 0.2s;
+}
+.ripple.delay2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fall {
+  to {
+    top: 48%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spread {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: var(--ripple-w);
+    height: var(--ripple-h);
+    opacity: 0;
+  }
 }
 
 /* ---------- utility ---------- */
@@ -141,6 +249,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1080px) {
@@ -224,7 +333,7 @@ body {
   font-size: 24px;
   display: inline-block;
   transform: rotate(90deg);
-  /* ← 雫だけを90度回転 */
+  /* ↑ 雫だけを90度回転 */
   transform-origin: center;
 }
 
@@ -309,7 +418,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
 
   .l_header-nav_link:hover {
@@ -402,6 +511,7 @@ body {
   font-size: 16px;
   text-align: center;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1080px) {
@@ -437,6 +547,9 @@ body {
   margin: 0 auto;
 }
 
+.l_footer_logo-link {
+  transition: all 0.3s ease-in-out;
+}
 .l_footer_logo-link:hover {
   filter: drop-shadow(0 0 6px rgba(180, 173, 108, 0.7));
 }
@@ -452,11 +565,6 @@ body {
     margin: 0;
   }
 }
-
-.l_footer_logo-link:hover {
-  filter: drop-shadow(0 0 6px rgba(180, 173, 108, 1));
-}
-
 .l_footer_shop-name {
   margin-top: 24px;
   text-align: center;
@@ -484,6 +592,7 @@ body {
   margin-top: 24px;
   text-align: center;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1080px) {
@@ -550,7 +659,7 @@ body {
 
 body.is-light .m_hamburger-bar {
   background: var(--white-color);
-  /* ← 白など、切り替えたい色 */
+  /* ↑ 白など、切り替えたい色 */
 }
 
 .m_hamburger-bar-color {
@@ -577,6 +686,7 @@ body.is-light .m_hamburger-bar {
   display: block;
   margin-top: 54px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .m_arrow-wrapper:hover {
@@ -611,6 +721,7 @@ body.is-light .m_hamburger-bar {
   border-radius: 9999px;
   background-color: var(--black-color);
   display: block;
+  transition: all 0.3s ease-in-out;
 }
 
 .top_menu .m_arrow {
@@ -639,6 +750,7 @@ body.is-light .m_hamburger-bar {
   transform: rotate(45deg);
   transform-origin: calc(100% - 0.5px) 50%;
   background-color: var(--black-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .top_menu .m_arrow::before {
@@ -667,15 +779,16 @@ body.is-light .m_hamburger-bar {
   position: absolute;
   inset: 0;
   /* top: 0; right: 0; bottom: 0; left: 0; と同じ */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(242, 242, 242, 0);
   /* 初期は透明 */
   transition: background-color 0.3s ease;
-  z-index: 1;
+  z-index: var(--z-index-default);
+  transition: all 0.3s ease-in-out;
 }
 
 .m_arrow_link:hover .m_overlay {
-  background-color: rgba(255, 255, 255, 0.3);
-  /* 白の透けレイヤー */
+  background-color: rgba(242, 242, 242, 0.3);
+  /* #f2f2f2の透けレイヤー */
 }
 
 .m_arrow_link:hover .m_arrow-wrapper__kasou {
@@ -820,9 +933,9 @@ body.is-light .m_hamburger-bar {
   background-color: var(--accent-color);
   color: var(--white-color);
   border-radius: 100vh;
+  border: 1px solid transparent;
 
-  transition: opacity 1s ease;
-  /* 画像の切替時の背景色もぬるっと変わるやつ */
+  transition: all 0.2s ease-in-out;
 }
 
 /*  button-hover  */
@@ -830,12 +943,10 @@ body.is-light .m_hamburger-bar {
   background-color: var(--white-color);
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  transition: 0.5s;
 }
 
 .m_btn:hover .online_cart-icon {
   content: url(../img/shop-logo_hover.png);
-  transition: 0.5s;
 }
 
 /* ---- pagination ---- */
@@ -862,6 +973,8 @@ body.is-light .m_hamburger-bar {
   align-items: center;
   justify-content: center;
   background: var(--gray-color);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .m_pagination_numbers__current {
@@ -904,11 +1017,12 @@ body.is-light .m_hamburger-bar {
 }
 
 /* pagenation hover */
-.m_pagination_numbers:not(.m_pagination_numbers__current):hover {
+.m_pagination_numbers:not(.m_pagination_numbers__current):not(
+    .m_pagination_numbers__between
+  ):hover {
   background-color: var(--white-color);
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  transition: all 0.3s ease;
 }
 
 .m_pagination_numbers__before:hover::before {
@@ -937,10 +1051,15 @@ body.is-light .m_hamburger-bar {
   height: 30px;
   border-bottom: 1px solid var(--black-color);
   margin-top: 16px;
+  transition: all 0.3s;
 }
 
 .m_category-menu_item::after {
   content: ">";
+}
+.m_category-menu_item:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
 }
 
 /* /------------article------------/ */
@@ -1459,6 +1578,7 @@ body.is-light .m_hamburger-bar {
   text-align: center;
   padding-right: 0;
   color: var(--white-color);
+  transition: all 0.2s ease-in-out;
 }
 
 .top_shop .top_section_title-arrow {
@@ -1466,6 +1586,7 @@ body.is-light .m_hamburger-bar {
   transform: translateX(50%);
   background-color: var(--white-color);
   width: clamp(225px, calc(225px + (75 * ((100vw - 768px) / 312))), 325px);
+  transition: all 0.2s ease-in-out;
 }
 
 .top_shop_link:hover .top_section_title-arrow {
@@ -1484,6 +1605,7 @@ body.is-light .m_hamburger-bar {
   transform: rotate(45deg);
   transform-origin: calc(100% - 0.5px) 50%;
   background-color: var(--white-color);
+  transition: all 0.2s ease-in-out;
 }
 
 .top_shop_link:hover .top_section_title-arrow::before {
@@ -1500,12 +1622,14 @@ body.is-light .m_hamburger-bar {
 .top_shop_logo-img {
   width: 100%;
   height: 100%;
+  color: var(--white-color);
+  transition: all 0.2s ease-in-out;
 }
 
 .top_shop_link:hover .top_shop_logo-img {
   filter: drop-shadow(0 0 12px rgba(180, 173, 108, 1))
     drop-shadow(0 0 24px rgba(180, 173, 108, 1));
-  transition: all 0.1s ease;
+  color: var(--accent-color);
 }
 
 .image_scroller {
@@ -2186,12 +2310,6 @@ body.is-light .m_hamburger-bar {
   }
 }
 
-.locations_desc_img-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
 .locations_desc_img {
   position: absolute;
   top: 0;
@@ -2199,7 +2317,7 @@ body.is-light .m_hamburger-bar {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   display: block;
   background-color: transparent; /* 念のため */
 }
@@ -2210,32 +2328,20 @@ body.is-light .m_hamburger-bar {
     object-fit: cover;
   }
 }
-
-/* .base-img {
-  z-index: 1;
-  opacity: 1;
-} */
-
-.hover-img {
-  z-index: 2;
+.locations_desc_img__hover {
   opacity: 0;
 }
-
-/* .locations_desc_img-wrapper:hover .base-img {
-  opacity: 0;
-} */
-
-.locations_desc_img-wrapper:hover .hover-img {
+.locations_desc_img-wrapper:hover .locations_desc_img__hover {
   opacity: 1;
 }
 
-.locations_desc_title {
+.locations_table_heading {
   font-size: 24px;
   font-weight: bold;
   margin-top: 16px;
 }
 @media screen and (min-width: 1080px) {
-  .locations_desc_title {
+  .locations_table_heading {
     margin-top: 0;
   }
 }
@@ -2260,7 +2366,7 @@ body.is-light .m_hamburger-bar {
 }
 @media screen and (min-width: 1080px) {
   .locations_td {
-    width: 200px;
+    width: 180px;
   }
 }
 
@@ -2270,7 +2376,7 @@ body.is-light .m_hamburger-bar {
 }
 .locations_map-link {
   display: block;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 .locations_map-link:hover {
   color: var(--accent-color);
@@ -2667,9 +2773,6 @@ body.is-light .m_hamburger-bar {
 
 /* ------------------ contact ----------------- */
 
-.contact_faq {
-}
-
 .contact_faq_wrapper {
   max-width: 800px;
 }
@@ -2678,6 +2781,7 @@ body.is-light .m_hamburger-bar {
   background-color: var(--gray-color);
   border-radius: 20px;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact_faq_button:hover {
@@ -3034,6 +3138,7 @@ body.is-light .m_hamburger-bar {
 /*----------------- js ------------------*/
 .js_body.is-active {
   overflow: hidden;
+  width: 100%;
 }
 
 .js_navigation {
@@ -3171,7 +3276,7 @@ body.is-light .m_hamburger-bar {
 
   opacity: 0;
   filter: blur(1em);
-  scale: 1.1;
+  transform: scale(1.1);
   transition: scale 1s var(--ease-out-quart), opacity 1s var(--ease-out-quart),
     filter 1.4s var(--ease-out-quart);
 }
@@ -3180,5 +3285,5 @@ body.is-light .m_hamburger-bar {
 .blur.isActive {
   opacity: 1;
   filter: blur(0);
-  scale: 1;
+  transform: scale(1);
 }
