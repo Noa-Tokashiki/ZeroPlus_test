@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // ページ遷移（CSSとタイミングを揃える）
       setTimeout(() => {
         window.location.href = href;
-      }, 500); // transitionと同じ時間
+      }, 100); // transitionと同じ時間
     });
   });
 });
