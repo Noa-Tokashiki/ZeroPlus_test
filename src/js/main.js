@@ -223,10 +223,6 @@ const topMenuImgSwiper = new Swiper(".top_menu-img-swiper", {
   speed: 800,
 });
 
-// kouki js
-
-// hiroki js
-
 // saaya js
 const mySwiper = new Swiper(".myswiperTumbler", {
   loop: false,
@@ -259,5 +255,81 @@ document.querySelectorAll(".color-btn_bag").forEach((btn) => {
     btn.classList.add("is-active");
     const index = parseInt(btn.dataset.index);
     mySwiper2.slideTo(index);
+  });
+});
+
+// kvのアニメーション;
+document.addEventListener("DOMContentLoaded", () => {
+  const blurElements = document.querySelectorAll(".blur");
+
+  blurElements.forEach((el, index) => {
+    const delay = 0.3 * index; // 順番に遅延（0.3秒ずつ）
+    el.style.transitionDelay = `${delay}s`;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("isActive");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-20% 0px",
+        threshold: 0,
+      }
+    );
+
+    observer.observe(el);
+  });
+});
+
+// top_about, about仮想ページ
+const setupIntersectionObserver = (target, options) => {
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("isActive");
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(target);
+};
+
+const setupAdvanced = (target) => {
+  const pathname = window.location.pathname;
+
+  let rootMargin;
+
+  if (pathname.includes("about.html")) {
+    rootMargin = "-70% 0px -30%"; // about.html の発火タイミング
+  } else if (pathname.includes("about-story__columbia.html")) {
+    rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
+  } else if (pathname.includes("about-story__ethiopia.html")) {
+    rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
+  } else if (pathname.includes("about-story__honduras.html")) {
+    rootMargin = "-10% 0px -90%"; // columbiaページ専用のタイミング（個別に調整OK）
+  } else {
+    rootMargin = "-55% 0px -45%"; // 他のページ用（デフォルト）
+  }
+
+  const options = {
+    root: null,
+    rootMargin: rootMargin,
+    threshold: 0,
+  };
+
+  setupIntersectionObserver(target, options);
+};
+
+// DOMが読み込まれたら実行
+document.addEventListener("DOMContentLoaded", () => {
+  const advancedElements = document.querySelectorAll(".advanced");
+  advancedElements.forEach((el) => {
+    setupAdvanced(el); // ページ別設定を使って初期化
   });
 });
