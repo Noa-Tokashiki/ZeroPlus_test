@@ -47,7 +47,18 @@ body {
   /*メイン*/
   font-size: 16px;
   line-height: 1.5;
-  /* background: var(--gray-color02); */
+
+  /* 遷移フェード用 */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.is-transition-active {
+  opacity: 0;
+}
+
+body.is-loaded {
+  opacity: 1;
 }
 
 /* opening */
