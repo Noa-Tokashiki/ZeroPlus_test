@@ -462,7 +462,7 @@ body {
 
 .l_two-column__aside {
   margin: 120px auto 0;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 @media screen and (min-width: 1080px) {
@@ -470,6 +470,9 @@ body {
     margin: 173px 0 0 0;
     width: 200px;
   }
+}
+.l_two-column__aside-single {
+  margin-top: 0;
 }
 
 /*-- l_footer --*/
@@ -928,6 +931,9 @@ body.is-light .m_hamburger-bar {
 
 /* ---- m_btn ---- */
 .m_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: var(--accent-color);
@@ -1043,6 +1049,7 @@ body.is-light .m_hamburger-bar {
   font-size: 20px;
   height: 37px;
   border-bottom: 2px solid var(--black-color);
+  text-align: center;
 }
 
 .m_category-menu_item {
@@ -2331,7 +2338,7 @@ body.is-light .m_hamburger-bar {
 .locations_desc_img__hover {
   opacity: 0;
 }
-.locations_desc_img-wrapper:hover .locations_desc_img__hover {
+.locations_desc:hover .locations_desc_img__hover {
   opacity: 1;
 }
 
@@ -2377,10 +2384,30 @@ body.is-light .m_hamburger-bar {
 .locations_map-link {
   display: block;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
+.locations_map_arrow {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--black-color);
+  border-radius: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  padding-bottom: 3px;
+  margin-top: 4.5px;
+  transition: all 0.3s ease-in-out;
+}
+
 .locations_map-link:hover {
   color: var(--accent-color);
   text-shadow: 0 0 6px rgba(180, 173, 108, 0.5);
+}
+.locations_map-link:hover .locations_map_arrow {
+  border: 1px solid var(--accent-color);
 }
 
 /* -------------------- news ------------------*/
@@ -2674,7 +2701,7 @@ body.is-light .m_hamburger-bar {
 }
 
 .online_btn-wrapper__view {
-  margin-bottom: 14px;
+  margin: 0 auto 14px auto;
 }
 
 .online_cart-icon {
@@ -2824,8 +2851,7 @@ body.is-light .m_hamburger-bar {
   display: flex;
   justify-content: center;
   /* 横中央 */
-  align-items: center;
-  /* 縦中央 */
+
   width: 35px;
   height: 35px;
   font-size: 18px;
@@ -2843,10 +2869,15 @@ body.is-light .m_hamburger-bar {
   color: var(--white-color);
   border-radius: 100%;
   background-color: var(--accent-color);
+  align-items: center;
+  /* 縦中央 */
+  padding-bottom: 2px;
 }
 
 .contact_faq_icon__a {
   color: var(--accent-color);
+  line-height: 1;
+  padding-top: 2px;
 }
 
 .contact_faq_txt {
@@ -2977,11 +3008,13 @@ body.is-light .m_hamburger-bar {
 .contact_form_label {
   display: flex;
   align-items: center;
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 1080px) {
   .contact_form_label {
     width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -3009,13 +3042,14 @@ body.is-light .m_hamburger-bar {
 .contact_form_example {
   font-size: 12px;
   opacity: 0.5;
+  margin-right: 8px;
 }
 
 @media screen and (min-width: 1080px) {
   .contact_form_example {
     position: absolute;
-    left: 32%;
-    top: 0;
+    left: 31%;
+    top: -4px;
     transform: translateY(-100%);
   }
 }
@@ -3092,15 +3126,15 @@ body.is-light .m_hamburger-bar {
   flex-shrink: 0;
 }
 
-.contact_form_label {
+/* .contact_form_label {
   margin-left: 8px;
-}
+} */
 
-@media screen and (min-width: 1080px) {
+/* @media screen and (min-width: 1080px) {
   .contact_form_label {
     justify-content: space-between;
   }
-}
+} */
 
 .contact_form_textarea {
   width: 100%;
@@ -3267,7 +3301,7 @@ body.is-light .m_hamburger-bar {
 .advanced.isActive .about_txt-sub {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.6s;
+  transition-delay: 1s;
 }
 
 /*----- kv -------*/
@@ -3286,4 +3320,33 @@ body.is-light .m_hamburger-bar {
   opacity: 1;
   filter: blur(0);
   transform: scale(1);
+}
+
+/* ------------404---------------- */
+
+.notfound_kv_bg {
+  object-position: right;
+}
+
+.notfound_contents {
+  padding-bottom: 0;
+}
+.notfound_msg {
+  text-align: center;
+}
+@media screen and (min-width: 1080px) {
+  .notfound_msg {
+    font-size: 18px;
+  }
+}
+.notfound_btn_wrapper {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 56px;
+}
+.notfound_btn::after {
+  content: ">";
+  padding: 0 0 3px 8px;
+  display: flex;
 }

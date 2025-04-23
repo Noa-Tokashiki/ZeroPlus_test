@@ -258,34 +258,6 @@ document.querySelectorAll(".color-btn_bag").forEach((btn) => {
   });
 });
 
-// kvのアニメーション;
-// document.addEventListener("DOMContentLoaded", () => {
-//   const blurElements = document.querySelectorAll(".blur");
-
-//   blurElements.forEach((el, index) => {
-//     const delay = 0.3 * index; // 順番に遅延（0.3秒ずつ）
-//     el.style.transitionDelay = `${delay}s`;
-
-//     const observer = new IntersectionObserver(
-//       (entries, observer) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             entry.target.classList.add("isActive");
-//             observer.unobserve(entry.target);
-//           }
-//         });
-//       },
-//       {
-//         root: null,
-//         rootMargin: "-20% 0px",
-//         threshold: 0,
-//       }
-//     );
-
-//     observer.observe(el);
-//   });
-// });
-
 // blur要素のためのIntersectionObserverを準備する（observeは後で）
 let blurObservers = [];
 
