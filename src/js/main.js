@@ -258,34 +258,6 @@ document.querySelectorAll(".color-btn_bag").forEach((btn) => {
   });
 });
 
-// kvのアニメーション;
-// document.addEventListener("DOMContentLoaded", () => {
-//   const blurElements = document.querySelectorAll(".blur");
-
-//   blurElements.forEach((el, index) => {
-//     const delay = 0.3 * index; // 順番に遅延（0.3秒ずつ）
-//     el.style.transitionDelay = `${delay}s`;
-
-//     const observer = new IntersectionObserver(
-//       (entries, observer) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             entry.target.classList.add("isActive");
-//             observer.unobserve(entry.target);
-//           }
-//         });
-//       },
-//       {
-//         root: null,
-//         rootMargin: "-20% 0px",
-//         threshold: 0,
-//       }
-//     );
-
-//     observer.observe(el);
-//   });
-// });
-
 // blur要素のためのIntersectionObserverを準備する（observeは後で）
 let blurObservers = [];
 
@@ -375,21 +347,21 @@ window.addEventListener("DOMContentLoaded", () => {
   const topKv = document.querySelector(".top_kv");
   const drop = document.getElementById("drop");
 
-  // const lastVisited = localStorage.getItem("lastVisited");
-  // const now = new Date().getTime(); // 現在のタイムスタンプ（ミリ秒）
-  // const twentyFourHours = 24 * 60 * 60 * 1000; // 24時間（ミリ秒）
+  const lastVisited = localStorage.getItem("lastVisited");
+  const now = new Date().getTime(); // 現在のタイムスタンプ（ミリ秒）
+  const twentyFourHours = 24 * 60 * 60 * 1000; // 24時間（ミリ秒）
 
-  // if (lastVisited && now - parseInt(lastVisited) < twentyFourHours) {
-  //   // 24時間以内ならアニメーションをスキップ
-  //   topKv.style.opacity = "1";
-  //   opening.style.display = "none";
-  //   document.body.classList.remove("is-active");
+  if (lastVisited && now - parseInt(lastVisited) < twentyFourHours) {
+    // 24時間以内ならアニメーションをスキップ
+    topKv.style.opacity = "1";
+    opening.style.display = "none";
+    document.body.classList.remove("is-active");
 
-  //   blurObservers.forEach(({ observer, target }) => {
-  //     observer.observe(target);
-  //   });
-  //   return;
-  // }
+    blurObservers.forEach(({ observer, target }) => {
+      observer.observe(target);
+    });
+    return;
+  }
 
   // 初期状態：top_kv 非表示
   topKv.style.opacity = "0";
@@ -461,7 +433,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("is-active");
 
     // ここで再生タイムスタンプを保存！
-    // localStorage.setItem("lastVisited", now);
+    localStorage.setItem("lastVisited", now);
 
     // blurをobserve開始
     blurObservers.forEach(({ observer, target }) => {
